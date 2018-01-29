@@ -17,7 +17,7 @@
     <string name="pref_Number">Formato de Número</string>
     <string name="pref_Decimal">Agrupamento de Dígitos</string>
     <string name="pref_DecimalSumm">Agrupar dígitos lógicamente</string>
-    <string name="pref_DecimalPts">Casas Deximais</string>
+    <string name="pref_DecimalPts">Casas Decimais</string>
     <string name="pref_DecimalPtsSumm">Definir o número de casas decimais</string>
     <string name="pref_vibe">Vibração</string>
     <string name="pref_vibeSumm">Vibrar ao pressionar tecla</string>
@@ -32,14 +32,14 @@
     <string name="pref_startScreensumm">Defina a tela inicial</string>
     <string name="pref_HideScreen">Esconder </string>
     <string name="pref_HideScreensumm">Esconde os selecionados </string>
-    <string name="title_timezone_add">ADICIONAR FUSO</string>
-    <string name="title_timezone_edit">EDITAR FUSO</string>
-    <string name="timezone_pick_zone">ESCOLHER FUSO</string>
+    <string name="title_timezone_add">ADICIONAR FUSO HORÁRIO</string>
+    <string name="title_timezone_edit">EDITAR FUSO HORÁRIO</string>
+    <string name="timezone_pick_zone">ESCOLHER FUSO HORÁRIO</string>
     <string name="timezone_pick_name">Nome personalizado</string>
     <string name="timezone_save">Salvar</string>
     <string name="timezone_cancel">Cancelar</string>
     <string name="timezone_search_filter">Digite para buscar facilmente</string>
-    <string name="error_must_pick_zone_name">Por favor escolha um fuso e um nome personalizado</string>
+    <string name="error_must_pick_zone_name">Por favor escolha um fuso horário e um nome personalizado</string>
     <string name="clear_mem">Limpar Memórias</string>
     <string name="clear_hist">Limpar Histórico</string>
     <string name="menu_add">Adicionar</string>
@@ -220,14 +220,14 @@
     <string name="prcntg">%</string>
     <string name="Bill">Total da Conta</string>
     <string name="splt">DIVIDIR</string>
-    <string name="Tip_Amnt">Gorjeto</string>
+    <string name="Tip_Amnt">Gorjeta</string>
     <string name="total_topay">Total a Pagar</string>
     <string name="total_perprsn">Total Por Pessoa</string>
 
     <color name="prefs_bg">#000000</color>
 
     <string name="_1">1</string>
-    <string name="text_home">Este é apenas um exemplo do uso do projeto de <b>Compartilhamento Social Simples</b>        \n\nVocê pode o design de compartilhamento aqui -<a href="">http://www.androidpatterns.com/uap_pattern/share-button</a></string>
+    <string name="text_home">Este é apenas um exemplo do uso do projeto de <b>Compartilhamento Social Simples</b>        \n\nVocê pode ver o design de compartilhamento aqui -<a href="">http://www.androidpatterns.com/uap_pattern/share-button</a></string>
     <!-- Facebook events -->
     <string name="toast_facebook_auth_success">Autenticação pelo Facebook feita com sucesso</string>
     <string name="toast_facebook_auth_fail">Um erro ocorreu ao autenticar com o Facebook</string>
@@ -236,7 +236,7 @@
     <string name="facebook_logged_out">Você está desconectado</string>
     <!-- Twitter events -->
     <string name="toast_twitter_auth_success">Autenticação pelo Twitter feita com sucesso</string>
-    <string name="toast_twitter_auth_fail">Um erro ocorreu ao autentica com o Twitter</string>
+    <string name="toast_twitter_auth_fail">Um erro ocorreu ao autenticar com o Twitter</string>
     <string name="twitter_post_published">Tuitado com sucesso</string>
     <string name="twitter_post_publishing_failed">Falha ao Tuitar</string>
     <string name="twitter_logged_out">Você está desconectado</string>
