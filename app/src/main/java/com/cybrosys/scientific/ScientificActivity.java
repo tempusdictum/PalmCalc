@@ -18,10 +18,6 @@
 
 package com.cybrosys.scientific;
 
-import com.actionbarsherlock.app.SherlockFragment;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
 import com.cybrosys.scientific.History;
 import com.cybrosys.scientific.Logic;
 import com.cybrosys.scientific.Persist;
@@ -34,11 +30,15 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.text.Html;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -49,8 +49,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ScientificActivity extends SherlockFragment implements
-		Logic.Listener {
+public class ScientificActivity extends Fragment implements Logic.Listener {
 
 	SharedPreferences sharedPref;
 	static SharedPreferences.Editor shared_editor;

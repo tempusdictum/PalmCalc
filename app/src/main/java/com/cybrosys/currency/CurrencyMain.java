@@ -25,7 +25,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import org.json.JSONException;
 import org.json.JSONObject;
-import com.actionbarsherlock.app.SherlockFragment;
 import com.cybrosys.palmcalc.PalmCalcActivity;
 import com.cybrosys.palmcalc.R;
 import android.annotation.SuppressLint;
@@ -38,6 +37,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
+import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -61,7 +61,7 @@ import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
 
-public class CurrencyMain extends SherlockFragment {
+public class CurrencyMain extends Fragment {
 	SharedPreferences Settings;
 	SharedPreferences sharedPrefs = PreferenceManager
 			.getDefaultSharedPreferences(PalmCalcActivity.ctx);

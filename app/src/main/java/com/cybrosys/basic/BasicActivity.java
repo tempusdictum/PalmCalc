@@ -21,22 +21,22 @@ package com.cybrosys.basic;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.text.Html;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.*;
 
-import com.actionbarsherlock.app.SherlockFragment;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
 import com.cybrosys.palmcalc.R;
 
-public class BasicActivity extends SherlockFragment implements Logic.Listener {
+public class BasicActivity extends Fragment implements Logic.Listener {
 
 	SharedPreferences sharedPref;
 	static SharedPreferences.Editor shared_editor;

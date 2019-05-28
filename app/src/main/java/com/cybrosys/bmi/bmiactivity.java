@@ -23,6 +23,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +31,6 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
-import com.actionbarsherlock.app.SherlockFragment;
 import com.cybrosys.palmcalc.PalmCalcActivity;
 import com.cybrosys.palmcalc.R;
 import com.cybrosys.unit.ArrayWheelAdapter;
@@ -38,7 +38,7 @@ import com.cybrosys.unit.OnWheelChangedListener;
 import com.cybrosys.unit.OnWheelScrollListener;
 import com.cybrosys.unit.WheelView;
 
-public class bmiactivity extends SherlockFragment {
+public class bmiactivity extends Fragment {
 
 	private boolean wheelScrolled = false;
 	Bundle savedstate;

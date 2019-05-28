@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.cybrosys.palmcalc"
     android:installLocation="auto"
     android:versionCode="4"
@@ -19,21 +20,24 @@
         android:requiresSmallestWidthDp="536" />
 
 
+    <!--android:theme="@style/Theme.Sherlock.Light.DarkActionBar"-->
     <application
         android:icon="@drawable/palm_icon"
         android:label="@string/app_name"
-        android:theme="@style/Theme.Sherlock.Light.DarkActionBar">
+        tools:ignore="GoogleAppIndexingWarning">
+        <!--android:theme="@style/Theme.Sherlock.NoActionBar"-->
         <activity
             android:name="com.cybrosys.SplashScreen.SplashscreenActivity"
             android:configChanges="orientation"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Sherlock.NoActionBar">
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name="com.cybrosys.palmcalc.PalmCalcActivity"></activity>
         <activity android:name="com.cybrosys.currency.Currency_Transprentlist"></activity>
         <activity android:name="com.cybrosys.palmcalc.UserSettingActivity" />

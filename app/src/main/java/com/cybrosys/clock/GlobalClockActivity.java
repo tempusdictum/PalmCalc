@@ -31,6 +31,7 @@ import android.os.Bundle;
 import android.os.SystemClock;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
+import android.support.v4.app.Fragment;
 import android.text.format.Time;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,11 +47,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.actionbarsherlock.app.SherlockFragment;
 import com.cybrosys.palmcalc.PalmCalcActivity;
 import com.cybrosys.palmcalc.R;
 
-public class GlobalClockActivity extends SherlockFragment implements
+public class GlobalClockActivity extends Fragment implements
 		OnClickListener {
 	Button btnRemove;
 	Button btnSave;

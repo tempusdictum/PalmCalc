@@ -25,6 +25,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
+import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -38,7 +39,6 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.actionbarsherlock.app.SherlockFragment;
 import com.cybrosys.palmcalc.PalmCalcActivity;
 import com.cybrosys.palmcalc.R;
 import com.cybrosys.unit.ArrayWheelAdapter;
@@ -46,7 +46,7 @@ import com.cybrosys.unit.OnWheelChangedListener;
 import com.cybrosys.unit.OnWheelScrollListener;
 import com.cybrosys.unit.WheelView;
 
-public class TipActivity extends SherlockFragment
+public class TipActivity extends Fragment
 
 {
 	public static String strWhealFontSize = "20";

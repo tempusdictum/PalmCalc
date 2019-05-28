@@ -762,7 +762,7 @@ public class WheelView extends View {
 	/**
 	 * Scroll the wheel
 	 * 
-	 * @param itemsToSkip
+	 * @param itemsToScroll
 	 *            items to scroll
 	 * @param time
 	 *            scrolling duration

@@ -18,17 +18,16 @@
 
 package com.cybrosys.palmcalc;
 
-import com.actionbarsherlock.app.ActionBar;
-import com.actionbarsherlock.app.SherlockPreferenceActivity;
-import com.cybrosys.palmcalc.R;
 
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
+import android.support.v7.app.ActionBar;
 import android.view.WindowManager;
 
-public class UserSettingActivity extends SherlockPreferenceActivity {
+public class UserSettingActivity extends PreferenceActivity {
 
 	@SuppressWarnings("unused")
 	private ActionBar bar;

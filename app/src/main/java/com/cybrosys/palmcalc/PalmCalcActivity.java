@@ -32,9 +32,10 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.app.FragmentTransaction;
+import android.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.util.DisplayMetrics;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -43,11 +44,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.actionbarsherlock.app.ActionBar;
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.actionbarsherlock.app.ActionBar.Tab;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
+import android.app.ActionBar;
+import android.support.v4.app.FragmentActivity;
+import android.app.ActionBar.Tab;
+import android.view.Menu;
+import android.view.MenuInflater;
 import com.cybrosys.bmi.bmiactivity;
 import com.cybrosys.clock.GlobalClockActivity;
 import com.cybrosys.scientific.ScientificActivity;
@@ -76,7 +77,7 @@ import com.cybrosys.currency.CurrencyMain;
  * this program. If not, see <http://www.gnu.org/licenses/>.
  **/
 
-public class PalmCalcActivity extends SherlockFragmentActivity implements
+public class PalmCalcActivity extends FragmentActivity implements
 		android.view.View.OnClickListener {
 
 	Button btnClear, btnSend;
@@ -132,7 +133,7 @@ public class PalmCalcActivity extends SherlockFragmentActivity implements
 		mViewPager.setId(R.id.pager);
 		showUserSettings();
 		setContentView(mViewPager);
-		bar = getSupportActionBar();
+		bar = getActionBar();//getSupportActionBar();
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM,
 				WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
 		
@@ -166,15 +167,14 @@ public class PalmCalcActivity extends SherlockFragmentActivity implements
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		MenuInflater inflater = getSupportMenuInflater();
+		MenuInflater inflater = this.getMenuInflater();
 		inflater.inflate(R.menu.settings, menu);
 		return true;
 
 	}
 
 	@Override
-	public boolean onOptionsItemSelected(
-			com.actionbarsherlock.view.MenuItem item) {
+	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 
 		case R.id.menu_settings:
@@ -364,11 +364,11 @@ public class PalmCalcActivity extends SherlockFragmentActivity implements
 			}
 		}
 
-		public TabsAdapter(SherlockFragmentActivity activity, ViewPager pager) {
+		public TabsAdapter(FragmentActivity activity, ViewPager pager) {
 			super(activity.getSupportFragmentManager());
 
 			mContext = activity;
-			mActionBar = activity.getSupportActionBar();
+			mActionBar = activity.getActionBar();
 			mViewPager = pager;
 			mViewPager.setAdapter(this);
 			mViewPager.setOnPageChangeListener(this);
@@ -401,7 +401,7 @@ public class PalmCalcActivity extends SherlockFragmentActivity implements
 		}
 
 		public void onPageScrolled(int position, float positionOffset,
-				int positionOffsetPixels) {
+					int positionOffsetPixels) {
 
 		}
 
@@ -448,6 +448,7 @@ public class PalmCalcActivity extends SherlockFragmentActivity implements
 		public void onPageScrollStateChanged(int state) {
 		}
 
+		@Override
 		public void onTabSelected(Tab tab, FragmentTransaction ft) {
 			Object tag = tab.getTag();
 
@@ -459,9 +460,11 @@ public class PalmCalcActivity extends SherlockFragmentActivity implements
 			}
 		}
 
+        @Override
 		public void onTabUnselected(Tab tab, FragmentTransaction ft) {
 		}
 
+        @Override
 		public void onTabReselected(Tab tab, FragmentTransaction ft) {
 		}
 	}

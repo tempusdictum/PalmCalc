@@ -18,7 +18,6 @@
 
 package com.cybrosys.unit;
 
-import com.actionbarsherlock.app.SherlockFragment;
 import com.cybrosys.palmcalc.PalmCalcActivity;
 import com.cybrosys.palmcalc.R;
 
@@ -27,6 +26,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
+import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -39,7 +39,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-public class AndroidQAActivity extends SherlockFragment {
+public class AndroidQAActivity extends Fragment {
 	// setting fontsize of wheel
 	public static String strWhealFontSize = "20";
 	int wheelselection = 0;
