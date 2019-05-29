@@ -39,7 +39,6 @@
         </activity>
 
         <activity android:name="com.cybrosys.palmcalc.PalmCalcActivity"></activity>
-        <activity android:name="com.cybrosys.currency.Currency_Transprentlist"></activity>
         <activity android:name="com.cybrosys.palmcalc.UserSettingActivity" />
         <activity android:name="com.cybrosys.clock.AddTimeZone" />
         <activity

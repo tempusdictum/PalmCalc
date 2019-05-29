@@ -27,4 +27,11 @@ dependencies {
     //implementation 'com.actionbarsherlock:actionbarsherlock:4.2.0'
     implementation 'com.github.hoijui:arity:00cffe65b8'
     //implementation 'com.github.palmcalc2019:arity:3.0.0'
+
+    //possible resolutions for dependencies for old Currency Converter
+    //implementation 'org.apache.httpcomponents:httpcore:4.3.3'
+    //implementation 'org.apache.httpcomponents:httpclient:4.3.6'
+
+    //OkHttp would require a rewrite of the net code
+    //implementation 'com.squareup.okhttp3:okhttp:3.14.2'
 }

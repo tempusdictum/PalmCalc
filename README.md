@@ -7,7 +7,6 @@ It currently consists of:
 
 * Scientific Calculator
 * Unit Converter
-* Currency Converter
 * Basic Calculator
 * Tip Calculator
 * World Clock
@@ -26,15 +25,6 @@ Unit Converter
 * Supports multi-unit conversion
 * Different conversion domains like temperature, length, weight, speed, volume, area , mass, time are available
 * Conversion from one unit to another can be performed easily with the help of wheel picker
-
-Currency Converter
------------------
-
-* Helps to perform exchange rate calculations
-* Set up your own personal currency list
-* Can convert to five different currencies simultaneously
-* Currencies of different countries are listed along with their flags
-* Up to date exchange rates
 
 Basic Calculator
 ---------------

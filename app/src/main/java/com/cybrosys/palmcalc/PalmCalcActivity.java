@@ -57,7 +57,6 @@ import com.cybrosys.share.ShareApp;
 import com.cybrosys.tip.TipActivity;
 import com.cybrosys.unit.AndroidQAActivity;
 import com.cybrosys.scientific.Demoscreen;
-import com.cybrosys.currency.CurrencyMain;
 
 /**
  * <Palmcalc is a multipurpose application consisting of calculators, converters
@@ -155,7 +154,6 @@ public class PalmCalcActivity extends FragmentActivity implements
 		// adding the fragments to the tabs adapter class
 		mTabsAdapter.addTab(bar.newTab(), ScientificActivity.class, null);
 		mTabsAdapter.addTab(bar.newTab(), AndroidQAActivity.class, null);
-		mTabsAdapter.addTab(bar.newTab(), CurrencyMain.class, null);
 		mTabsAdapter.addTab(bar.newTab(), BasicActivity.class, null);
 		mTabsAdapter.addTab(bar.newTab(), TipActivity.class, null);
 		mTabsAdapter.addTab(bar.newTab(), GlobalClockActivity.class, null);
@@ -418,22 +416,18 @@ public class PalmCalcActivity extends FragmentActivity implements
 				bar.setIcon(inArray[1]);
 				break;
 			case 2:
-				bar.setTitle("Currency Converter");
-				bar.setIcon(inArray[2]);
-				break;
-			case 3:
 				bar.setTitle("Basic Calculator");
 				bar.setIcon(inArray[3]);
 				break;
-			case 4:
+			case 3:
 				bar.setTitle("Tip Calculator");
 				bar.setIcon(inArray[4]);
 				break;
-			case 5:
+			case 4:
 				bar.setTitle("Global Clock");
 				bar.setIcon(inArray[5]);
 				break;
-			case 6:
+			case 5:
 				bar.setTitle("BMI Calculator");
 				bar.setIcon(inArray[6]);
 				break;
