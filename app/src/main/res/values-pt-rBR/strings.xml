@@ -49,7 +49,6 @@
     <string name="LnIn">e<sup><small>x</small></sup>        ")</string>
     <string name="LogIn">10<sup><small>x</small></sup></string>
     <string name="error">Error</string>
-    <string name="SharedPref">com.cybrosys.scientific</string>
     <string name="strFltpt">FloatPt</string>
     <string name="strBlank"></string>
     <string name="strDeg">[DEG]</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">PalmCalc</string>
+    <string name="app_name">PalmCalc2019</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="pref_send_report">Send crash reports</string>
@@ -43,13 +43,19 @@
     <string name="clear_mem">Clear Memories</string>
     <string name="clear_hist">Clear History</string>
     <string name="menu_add">Add</string>
-    <string name="SinIn">sin<sup><small>-1</small></sup></string>
-    <string name="CosIn">cos<sup><small>-1</small></sup></string>
-    <string name="TanIn">tan<sup><small>-1</small></sup></string>
-    <string name="LnIn">e<sup><small>x</small></sup>        ")</string>
-    <string name="LogIn">10<sup><small>x</small></sup></string>
+    <string name="SinIn">sin
+<sup><small>-1</small></sup></string>
+    <string name="CosIn">cos
+<sup><small>-1</small></sup></string>
+    <string name="TanIn">tan
+<sup><small>-1</small></sup></string>
+    <string name="LnIn">e
+<sup><small>x</small></sup>        ")
+</string>
+    <string name="LogIn">10
+<sup><small>x</small></sup></string>
     <string name="error">Error</string>
-    <string name="SharedPref">com.cybrosys.scientific</string>
+    <string name="SharedPref">com.github.palmcalc2019.scientific</string>
     <string name="strFltpt">FloatPt</string>
     <string name="strBlank"></string>
     <string name="strDeg">[DEG]</string>
@@ -227,10 +233,13 @@
     <color name="prefs_bg">#000000</color>
 
     <string name="_1">1</string>
-    <string name="text_home">This is just example of using<b>Simple Social Sharing</b>        project\n\nYou can see right design of sharing here -<a href="">http://www.androidpatterns.com/uap_pattern/share-button</a></string>
+    <string name="text_home">This is just example of using
+<b>Simple Social Sharing</b>        project\n\nYou can see right design of sharing here -
+<a href="">http://www.androidpatterns.com/uap_pattern/share-button</a></string>
     <!-- Facebook events -->
     <string name="toast_facebook_auth_success">Facebook authentication is successful</string>
-    <string name="toast_facebook_auth_fail">Error was occurred during Facebook authentication</string>
+    <string name="toast_facebook_auth_fail">Error was occurred during Facebook authentication
+</string>
     <string name="facebook_post_published">Posted to Facebook successfully</string>
     <string name="facebook_post_publishing_failed">Post publishing was failed</string>
     <string name="facebook_logged_out">You are logged out</string>

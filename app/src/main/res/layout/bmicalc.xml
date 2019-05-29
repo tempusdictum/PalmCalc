@@ -24,7 +24,7 @@
                     android:layout_weight="1"
                     android:orientation="horizontal">
 
-                <com.cybrosys.unit.WheelView
+                <com.github.palmcalc2019.unit.WheelView
                         android:id="@+id/p1"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
@@ -39,7 +39,7 @@
                     android:layout_weight="1"
                     android:orientation="horizontal">
 
-                <com.cybrosys.unit.WheelView
+                <com.github.palmcalc2019.unit.WheelView
                         android:id="@+id/p2"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"

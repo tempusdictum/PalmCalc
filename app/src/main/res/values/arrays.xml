@@ -30,13 +30,12 @@
         <item name="BMI">6</item>
     </string-array>
     <string-array name="HidescreenValues">
-        <item name="scientific">com.cybrosys.scientific.ScientificActivity</item>
-        <item name="unit">com.cybrosys.unit.AndroidQAActivity</item>
-        <item name="currency">com.cybrosys.currency.CurrencyMain</item>
-        <item name="basic">com.cybrosys.basic.BasicActivity</item>
-        <item name="tip"> com.cybrosys.tip.TipActivity</item>
-        <item name="Global">com.cybrosys.clock.GlobalClockActivity</item>
-        <item name="BMI">com.cybrosys.bmi.bmiactivity</item>
+        <item name="scientific">com.github.palmcalc2019.scientific.ScientificActivity</item>
+        <item name="unit">com.github.palmcalc2019.unit.AndroidQAActivity</item>
+        <item name="basic">com.github.palmcalc2019.basic.BasicActivity</item>
+        <item name="tip"> com.github.palmcalc2019.tip.TipActivity</item>
+        <item name="Global">com.github.palmcalc2019.clock.GlobalClockActivity</item>
+        <item name="BMI">com.github.palmcalc2019.bmi.bmiactivity</item>
     </string-array>
     <string-array name="EMPTY_STRING_ARRAY"></string-array>
     <string-array name="Decimalpts">

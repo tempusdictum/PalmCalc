@@ -85,7 +85,7 @@
                                     android:text="@string/cntry"
                                     android:textColor="#FFFFFF"/>
 
-                            <com.cybrosys.unit.WheelView
+                            <com.github.palmcalc2019.unit.WheelView
                                     android:id="@+id/tipcntry"
                                     style="@style/tip"
                                     android:layout_width="fill_parent"
@@ -113,7 +113,7 @@
                                     android:text="@string/prcntg"
                                     android:textColor="#FFFFFF"/>
 
-                            <com.cybrosys.unit.WheelView
+                            <com.github.palmcalc2019.unit.WheelView
                                     android:id="@+id/tippercentage"
                                     style="@style/tip"
                                     android:layout_width="fill_parent"
@@ -140,7 +140,7 @@
                                     android:text="@string/splt"
                                     android:textColor="#FFFFFF"/>
 
-                            <com.cybrosys.unit.WheelView
+                            <com.github.palmcalc2019.unit.WheelView
                                     android:id="@+id/tipsplt"
                                     style="@style/tip"
                                     android:layout_width="fill_parent"

@@ -513,23 +513,23 @@
                 android:background="@drawable/displayshape"
                 android:orientation="vertical">
 
-            <com.cybrosys.scientific.CalculatorDisplay
+            <com.github.palmcalc2019.scientific.CalculatorDisplay
                     android:id="@+id/display"
                     android:layout_width="fill_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     maxDigits="@integer/max_digits">
 
-                <com.cybrosys.scientific.CalculatorEditText
+                <com.github.palmcalc2019.scientific.CalculatorEditText
                         android:id="@+id/txtInput"
                         style="@style/display_style"
                         android:imeOptions="flagNoExtractUi"/>
 
-                <com.cybrosys.scientific.CalculatorEditText
+                <com.github.palmcalc2019.scientific.CalculatorEditText
                         android:id="@+id/txtOutput"
                         style="@style/display_style"
                         android:imeOptions="flagNoExtractUi"/>
-            </com.cybrosys.scientific.CalculatorDisplay>
+            </com.github.palmcalc2019.scientific.CalculatorDisplay>
         </LinearLayout>
 
         <TableLayout

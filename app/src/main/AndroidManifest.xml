@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.cybrosys.palmcalc"
+    package="com.github.palmcalc2019.palmcalc"
     android:installLocation="auto"
     android:versionCode="5"
     android:versionName="3.0">
@@ -27,7 +27,7 @@
         tools:ignore="GoogleAppIndexingWarning">
         <!--android:theme="@style/Theme.Sherlock.NoActionBar"-->
         <activity
-            android:name="com.cybrosys.SplashScreen.SplashscreenActivity"
+            android:name="com.github.palmcalc2019.SplashScreen.SplashscreenActivity"
             android:configChanges="orientation"
             android:label="@string/app_name"
             >
@@ -38,11 +38,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.cybrosys.palmcalc.PalmCalcActivity"></activity>
-        <activity android:name="com.cybrosys.palmcalc.UserSettingActivity" />
-        <activity android:name="com.cybrosys.clock.AddTimeZone" />
+        <activity android:name="com.github.palmcalc2019.palmcalc.PalmCalcActivity"></activity>
+        <activity android:name="com.github.palmcalc2019.palmcalc.UserSettingActivity" />
+        <activity android:name="com.github.palmcalc2019.clock.AddTimeZone" />
         <activity
-            android:name="com.cybrosys.scientific.Demoscreen"
+            android:name="com.github.palmcalc2019.scientific.Demoscreen"
             android:theme="@style/Transparent" />
 
     </application>

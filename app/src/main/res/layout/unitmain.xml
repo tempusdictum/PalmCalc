@@ -19,7 +19,7 @@
                 android:background="@drawable/wheelcover"
                 android:orientation="horizontal">
 
-            <com.cybrosys.unit.WheelView
+            <com.github.palmcalc2019.unit.WheelView
                     android:id="@+id/p1"
                     android:layout_width="0dip"
                     android:layout_height="fill_parent"
@@ -29,7 +29,7 @@
                     android:tag="1"
                     tools:ignore="NestedWeights"/>
 
-            <com.cybrosys.unit.WheelView
+            <com.github.palmcalc2019.unit.WheelView
                     android:id="@+id/p2"
                     android:layout_width="0dip"
                     android:layout_height="fill_parent"
@@ -38,7 +38,7 @@
                     android:layout_weight=".5"
                     android:tag="2"/>
 
-            <com.cybrosys.unit.WheelView
+            <com.github.palmcalc2019.unit.WheelView
                     android:id="@+id/p3"
                     android:layout_width="0dip"
                     android:layout_height="fill_parent"

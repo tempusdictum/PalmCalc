@@ -59,7 +59,7 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-        <com.cybrosys.scientific.CalculatorDisplay
+        <com.github.palmcalc2019.scientific.CalculatorDisplay
                 android:id="@+id/display"
                 android:layout_width="0dip"
                 android:layout_height="fill_parent"
@@ -68,16 +68,16 @@
                 android:background="@drawable/displayshape"
                 tools:ignore="NestedWeights">
 
-            <com.cybrosys.scientific.CalculatorEditText
+            <com.github.palmcalc2019.scientific.CalculatorEditText
                     android:id="@+id/txtInput"
                     style="@style/display_style"
                     android:imeOptions="flagNoExtractUi"/>
 
-            <com.cybrosys.scientific.CalculatorEditText
+            <com.github.palmcalc2019.scientific.CalculatorEditText
                     android:id="@+id/txtOutput"
                     style="@style/display_style"
                     android:imeOptions="flagNoExtractUi"/>
-        </com.cybrosys.scientific.CalculatorDisplay>
+        </com.github.palmcalc2019.scientific.CalculatorDisplay>
     </LinearLayout>
 
     <TableLayout
