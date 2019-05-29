@@ -36,7 +36,7 @@ import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
-import android.support.v4.view.ViewPager;
+import androidx.viewpager.widget.ViewPager;
 import android.text.Html;
 import android.view.Gravity;
 import android.view.KeyEvent;
