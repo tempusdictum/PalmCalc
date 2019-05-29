@@ -25,4 +25,6 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     //implementation 'com.actionbarsherlock:actionbarsherlock:4.2.0'
+    implementation 'com.github.hoijui:arity:00cffe65b8'
+    //implementation 'com.github.palmcalc2019:arity:3.0.0'
 }
