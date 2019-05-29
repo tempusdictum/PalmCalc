@@ -52,7 +52,8 @@ public class ShareApp extends Fragment {
 
 		webAbout = (TextView) getView().findViewById(R.id.textView1);
 		webAbout.setText(Html
-				.fromHtml("Thanks for downloading and using palmcalc. " +
+				.fromHtml("OUTDATED INFORMATION -- THIS SECTION TO BE REWRITTEN<br /><br />" +
+                        " Thanks for downloading and using palmcalc. " +
                         "Hope you had a great experience and your purpose was served. " +
                         "Palmcalc is an open source initiative by a few youngsters of Cybrosys. " +
                         "We are also planning enhancement for the product in future. " +
