@@ -55,7 +55,7 @@
     <string name="LogIn">10
 <sup><small>x</small></sup></string>
     <string name="error">Error</string>
-    <string name="SharedPref">com.github.palmcalc2019.scientific</string>
+    <string name="SharedPref" translatable="false">com.github.palmcalc2019.scientific</string>
     <string name="strFltpt">FloatPt</string>
     <string name="strBlank"></string>
     <string name="strDeg">[DEG]</string>
