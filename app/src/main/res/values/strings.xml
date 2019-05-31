@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">PalmCalc2019</string>
+    <string name="app_name">PalmCalc 2019+</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="pref_send_report">Send crash reports</string>
