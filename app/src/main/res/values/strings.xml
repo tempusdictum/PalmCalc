@@ -258,4 +258,6 @@
     <string name="button_share_twitter">Share on Twitter</string>
     <string name="menu_logout">Logout</string>
 
+    <string name="whealfontsize" translatable="false">16</string>
+
 </resources>
