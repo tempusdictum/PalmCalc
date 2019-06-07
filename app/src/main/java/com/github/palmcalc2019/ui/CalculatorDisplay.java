@@ -1,4 +1,4 @@
-/**
+/*
  * <Palmcalc is a multipurpose application consisting of calculators, converters
  * and world clock> Copyright (C) <2013> <Cybrosys Technologies pvt. ltd.>
  * 
@@ -16,8 +16,7 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  **/
 
-
-package com.github.palmcalc2019.basic;
+package com.github.palmcalc2019.ui;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -52,7 +51,6 @@ class CalculatorDisplay extends ViewSwitcher {
 	TranslateAnimation inAnimDown;
 	TranslateAnimation outAnimDown;
 
-	@SuppressWarnings("unused")
 	private Logic mLogic;
 	private int inMaxDigits = inMax_Digits;
 
@@ -149,9 +147,14 @@ class CalculatorDisplay extends ViewSwitcher {
 		EditText etxtEditText = (EditText) getNextView();
 		etxtEditText.setTextColor(Color.parseColor("#000000"));
 		etxtEditText.setText(text);
-		BasicCalcFragment.imm.hideSoftInputFromWindow(
+		ScientificCalcFragment.imm.hideSoftInputFromWindow(
 				etxtEditText.getWindowToken(), 0);
-		etxtEditText.setSelection(text.length());
+		try {
+			etxtEditText.setSelection(text.length());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		showNext();
 	}
 
@@ -162,6 +165,7 @@ class CalculatorDisplay extends ViewSwitcher {
 
 	@Override
 	protected void onFocusChanged(boolean gain, int inDirection, Rect prev) {
+	    super.onFocusChanged(gain, inDirection, prev);
 		if (!gain) {
 			requestFocus();
 		}
