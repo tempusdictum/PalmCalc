@@ -27,6 +27,8 @@ import org.javia.arity.SyntaxException;
 
 import com.github.palmcalc2019.palmcalc.PalmCalcActivity;
 import com.github.palmcalc2019.palmcalc.R;
+import com.github.palmcalc2019.ui.Logic;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
@@ -70,7 +72,7 @@ class EventListener implements View.OnKeyListener, OnClickListener,
 	Button btnsM[] = new Button[10];
 	View vwLayout;
 	TableLayout tblltTable;
-	Logic mHandler;
+	ScientificLogic mHandler;
 	ViewPager mPager;
 	private Symbols mSymbols = new Symbols();
 	int inShift = 0, inHyp = 0;
@@ -80,7 +82,7 @@ class EventListener implements View.OnKeyListener, OnClickListener,
 	private static String PREFNAME = "nypref";
 	static SharedPreferences.Editor editor;
 
-	void setHandler(Logic handler, ViewPager pager) {
+	void setHandler(ScientificLogic handler, ViewPager pager) {
 		mHandler = handler;
 		mPager = pager;
 	}

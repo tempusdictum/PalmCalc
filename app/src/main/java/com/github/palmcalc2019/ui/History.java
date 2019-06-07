@@ -138,7 +138,7 @@ public class History {
 		}
 	}
 
-	String getAns() {
+	public String getAns() {
 		String strAns = "";
 		for (int inI = 0; inI < mEntries.size(); inI++) {
 			if (isValidNumber("" + mEntries.get(inI)))

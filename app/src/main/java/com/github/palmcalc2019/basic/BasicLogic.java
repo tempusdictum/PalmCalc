@@ -48,7 +48,7 @@ class BasicLogic extends Logic {
 	public static final String MARKER_EVALUATE_ON_RESUME = "?";
 	private static final String INFINITY = "Infinity";
 	private static final String NAN = "NaN";
-	static final char chMinus = '-';
+
 	private final String mErrorString;
 	public final static int DELETE_MODE_BACKSPACE = 0;
 	public final static int DELETE_MODE_CLEAR = 1;
@@ -151,7 +151,8 @@ class BasicLogic extends Logic {
 						.getSelectionStart() != text.length());
 	}
 
-	void onDelete() {
+	@Override
+	public void onDelete() {
 		if (getText().equals(mResult) || mIsError) {
 			clear(false);
 		} else {
@@ -289,10 +290,6 @@ class BasicLogic extends Logic {
 			result = mantissa;
 		}
 		return result;
-	}
-
-	public boolean isOperator(String text) {
-		return text.length() == 1 && isOperator(text.charAt(0));
 	}
 
 	@Override

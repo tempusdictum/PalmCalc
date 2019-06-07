@@ -43,7 +43,7 @@ class ScientificLogic extends Logic {
 	public static final String strMarker = "?";
 	private static final String strInfin = "Infinity";
 	private static final String strNan = "NaN";
-	static final char chMinus = '-';
+
 	private final String strErrorString;
 	public final static int inDelModeBa = 0;
 	public final static int inDelModClea = 1;
@@ -107,7 +107,8 @@ class ScientificLogic extends Logic {
 		return mDisplay.getText().toString();
 	}
 
-	void insert(String strDelta) {
+	@Override
+	public void insert(String strDelta) {
 		mDisplay.insert(strDelta);
 		setDeleteMode(inDelModeBa);
 	}
@@ -156,7 +157,8 @@ class ScientificLogic extends Logic {
 						.getSelectionStart() != strText.length());
 	}
 
-	void onDelete() {
+	@Override
+	public void onDelete() {
 		if (getText().equals(strResult) || isError) {
 			clear(false);
 		} else {
@@ -294,8 +296,9 @@ class ScientificLogic extends Logic {
 		}
 	}
 
-	// to evaluate the result of calculation
-	String evaluate(String strInput) throws SyntaxException {
+	/**to evaluate the result of calculation*/
+	@Override
+	public String evaluate(String strInput) throws SyntaxException {
 		if (strInput.trim().equals("")) {
 
 			return "";
@@ -394,11 +397,8 @@ class ScientificLogic extends Logic {
 
 	}
 
-	static boolean isOperator(String strText) {
-		return strText.length() == 1 && isOperator(strText.charAt(0));
-	}
-
-	static boolean isOperator(char chC) {
+	@Override
+	public boolean isOperator(char chC) {
 		return "+-\u00d7\u00f7/*".indexOf(chC) != -1;
 	}
 

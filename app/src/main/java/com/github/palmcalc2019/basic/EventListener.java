@@ -31,6 +31,7 @@ import android.widget.*;
 
 import com.github.palmcalc2019.palmcalc.PalmCalcActivity;
 import com.github.palmcalc2019.palmcalc.R;
+import com.github.palmcalc2019.ui.Logic;
 
 class EventListener implements View.OnKeyListener, OnClickListener {
 
@@ -43,7 +44,7 @@ class EventListener implements View.OnKeyListener, OnClickListener {
 	Button btnsM[] = new Button[10];
 	View vwLayout;
 	TableLayout tblltTable;
-	Logic mHandler;
+	BasicLogic mHandler;
 	ViewPager mPager;
 	// private Symbols mSymbols = new Symbols();
 	int inShift = 0, inHyp = 0;
@@ -52,7 +53,7 @@ class EventListener implements View.OnKeyListener, OnClickListener {
 	SharedPreferences shPref;
 	static SharedPreferences.Editor editor;
 
-	void setHandler(Logic handler, ViewPager pager) {
+	void setHandler(BasicLogic handler, ViewPager pager) {
 		mHandler = handler;
 		mPager = pager;
 	}
