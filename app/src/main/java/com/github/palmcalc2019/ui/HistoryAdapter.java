@@ -1,4 +1,4 @@
-/**
+/*
  * <Palmcalc is a multipurpose application consisting of calculators, converters
  * and world clock> Copyright (C) <2013> <Cybrosys Technologies pvt. ltd.>
  * 
@@ -16,7 +16,7 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  **/
 
-package com.github.palmcalc2019.basic;
+package com.github.palmcalc2019.ui;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -32,12 +32,11 @@ import org.javia.arity.SyntaxException;
 import java.util.Vector;
 
 class HistoryAdapter extends BaseAdapter {
-	private Vector<HistoryEntry> mEntries;
+    private Vector<HistoryEntry> mEntries;
 	private LayoutInflater mInflater;
 	private Logic mEval;
 
-	HistoryAdapter(Context context, History history,
-                   Logic evaluator) {
+	HistoryAdapter(Context context, History history, Logic evaluator) {
 		mEntries = history.mEntries;
 		// mInflater = (LayoutInflater)
 		// context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
