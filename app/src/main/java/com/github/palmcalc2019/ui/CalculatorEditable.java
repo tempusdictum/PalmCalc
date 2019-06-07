@@ -1,4 +1,4 @@
-/**
+/*
  * <Palmcalc is a multipurpose application consisting of calculators, converters
  * and world clock> Copyright (C) <2013> <Cybrosys Technologies pvt. ltd.>
  * 
@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/>.
  **/
-package com.github.palmcalc2019.basic;
+package com.github.palmcalc2019.ui;
 
 import android.text.Editable;
 import android.text.SpannableStringBuilder;
