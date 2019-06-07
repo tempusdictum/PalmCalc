@@ -1,4 +1,4 @@
-/**
+/*
  * <Palmcalc is a multipurpose application consisting of calculators, converters
  * and world clock> Copyright (C) <2013> <Cybrosys Technologies pvt. ltd.>
  * 
@@ -16,7 +16,7 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  **/
 
-package com.github.palmcalc2019.scientific;
+package com.github.palmcalc2019.ui;
 
 import android.content.SharedPreferences;
 import android.widget.BaseAdapter;
@@ -27,6 +27,10 @@ import java.io.IOException;
 import java.util.Vector;
 import java.util.regex.Pattern;
 
+/**
+ * Keeps track of the Calculation history
+ *
+ */
 class History {
 	private static final int inVersion = 1;
 	private static final int inMaxEntries = 100;
