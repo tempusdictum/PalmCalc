@@ -1,4 +1,4 @@
-/**
+/*
  * <Palmcalc is a multipurpose application consisting of calculators, converters
  * and world clock> Copyright (C) <2013> <Cybrosys Technologies pvt. ltd.>
  * 
@@ -16,7 +16,7 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  **/
 
-package com.github.palmcalc2019.scientific;
+package com.github.palmcalc2019.ui;
 
 import java.io.DataInput;
 import java.io.DataOutput;
