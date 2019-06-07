@@ -16,7 +16,7 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  **/
 
-package com.github.palmcalc2019.scientific;
+package com.github.palmcalc2019.ui;
 
 import android.text.ClipboardManager;
 import android.app.Dialog;
@@ -34,7 +34,7 @@ import android.view.MotionEvent;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
+import androidx.appcompat.widget.AppCompatEditText;
 import android.widget.ListView;
 import android.view.View;
 import android.widget.TextView;
@@ -46,15 +46,7 @@ import java.lang.reflect.Method;
 
 import com.github.palmcalc2019.palmcalc.R;
 
-import android.view.*;
-import android.widget.*;
-
-import com.github.palmcalc2019.palmcalc.R;
-
-import java.lang.reflect.Method;
-
-@SuppressWarnings("deprecation")
-public class CalculatorEditText extends EditText {
+public class CalculatorEditText extends AppCompatEditText {
 
 	private static final int inCut = 0;
 	private static final int inCopy = 1;
@@ -145,7 +137,7 @@ public class CalculatorEditText extends EditText {
 
 	private void show() {
 
-		final Dialog dialog = new Dialog(ScientificCalcFragment.ctx,
+		final Dialog dialog = new Dialog(getContext(),
 				R.style.AlertDialogCustom);
 
 		dialog.setContentView(R.layout.custom_clip);
@@ -153,24 +145,24 @@ public class CalculatorEditText extends EditText {
 		dialog.setTitle("Clipboard");
 		ListView lstvOpt = (ListView) dialog.findViewById(R.id.lstvOpt);
 
-		ma = adapterM.createFromResource(ScientificCalcFragment.ctx,
+		ma = adapterM.createFromResource(getContext(),
 				R.array.strContext, R.layout.sci_clip);
 		CharSequence primaryClip = getClipText();
 		if (getText().length() == 0) {
 			if (primaryClip == null || !canPaste(primaryClip)) {
-				ma = adapterM.createFromResource(ScientificCalcFragment.ctx,
+				ma = adapterM.createFromResource(getContext(),
 						R.array.strContextEmpty, R.layout.sci_clip);
 			} else {
-				ma = adapterM.createFromResource(ScientificCalcFragment.ctx,
+				ma = adapterM.createFromResource(getContext(),
 						R.array.strContextEm, R.layout.sci_clip);
 			}
 		} else if (getText().length() > 0) {
 			if (primaryClip == null || !canPaste(primaryClip)) {
-				ma = adapterM.createFromResource(ScientificCalcFragment.ctx,
+				ma = adapterM.createFromResource(getContext(),
 						R.array.strContextHa, R.layout.sci_clip);
 
 			} else
-				ma = adapterM.createFromResource(ScientificCalcFragment.ctx,
+				ma = adapterM.createFromResource(getContext(),
 						R.array.strContext, R.layout.sci_clip);
 		}
 
