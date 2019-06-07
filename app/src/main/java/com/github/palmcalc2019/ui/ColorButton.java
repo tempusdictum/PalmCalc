@@ -1,4 +1,4 @@
-/**
+/*
  * <Palmcalc is a multipurpose application consisting of calculators, converters
  * and world clock> Copyright (C) <2013> <Cybrosys Technologies pvt. ltd.>
  * 
@@ -16,7 +16,7 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  **/
 
-package com.github.palmcalc2019.scientific;
+package com.github.palmcalc2019.ui;
 
 import com.github.palmcalc2019.palmcalc.PalmCalcActivity;
 import com.github.palmcalc2019.palmcalc.R;
@@ -26,16 +26,16 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Paint.Style;
 import android.util.AttributeSet;
-import android.widget.Button;
 import android.view.View.OnClickListener;
 import android.view.View;
 import android.view.MotionEvent;
 import android.content.res.Resources;
+import androidx.appcompat.widget.AppCompatButton;
 
 /**
  * Button with click-animation effect.
  */
-class ColorButton extends Button implements OnClickListener {
+class ColorButton extends AppCompatButton implements OnClickListener {
 	int CLICK_FEEDBACK_COLOR;
 	static final int CLICK_FEEDBACK_INTERVAL = 10;
 	static final int CLICK_FEEDBACK_DURATION = 350;
@@ -51,11 +51,12 @@ class ColorButton extends Button implements OnClickListener {
 		if (!isInEditMode()) {
 			PalmCalcActivity calc = (PalmCalcActivity) context;
 			init(calc);
-			mListener = ScientificCalcFragment.mListener;
+			mListener = BasicCalcFragment.mListener;
 			setOnClickListener(this);
 		}
 	}
 
+	@Override
 	public void onClick(View view) {
 		mListener.onClick(this);
 	}
@@ -89,10 +90,10 @@ class ColorButton extends Button implements OnClickListener {
 		measureText();
 	}
 
-	@SuppressWarnings("unused")
 	private void drawMagicFlame(int duration, Canvas canvas) {
 		int alpha = 255 - 255 * duration / CLICK_FEEDBACK_DURATION;
 		int color = CLICK_FEEDBACK_COLOR | (alpha << 24);
+
 		mFeedbackPaint.setColor(color);
 		canvas.drawRect(1, 1, getWidth() - 1, getHeight() - 1, mFeedbackPaint);
 	}
@@ -105,11 +106,11 @@ class ColorButton extends Button implements OnClickListener {
 			if (animDuration >= CLICK_FEEDBACK_DURATION) {
 				mAnimStart = -1;
 			} else {
-				// drawMagicFlame(animDuration, canvas);
+				drawMagicFlame(animDuration, canvas);
 				postInvalidateDelayed(CLICK_FEEDBACK_INTERVAL);
 			}
 		} else if (isPressed()) {
-			// drawMagicFlame(0, canvas);
+			drawMagicFlame(0, canvas);
 		}
 
 		CharSequence text = getText();
