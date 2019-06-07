@@ -45,7 +45,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ScientificCalcFragment extends Fragment implements Logic.Listener {
+public class ScientificCalcFragment extends Fragment implements ScientificLogic.Listener {
 
 	SharedPreferences sharedPref;
 	static SharedPreferences.Editor shared_editor;
@@ -63,7 +63,7 @@ public class ScientificCalcFragment extends Fragment implements Logic.Listener {
 	CalculatorDisplay mDisplay;
 	private Persist mPersist;
 	private History mHistory;
-	private Logic mLogic;
+	private ScientificLogic mLogic;
 	ViewPager mPager;
 	static InputMethodManager imm;
 	DisplayMetrics metrics;
@@ -110,7 +110,7 @@ public class ScientificCalcFragment extends Fragment implements Logic.Listener {
 		mPersist = new Persist(ctx);
 		mPersist.load();
 		mHistory = mPersist.history;
-		mLogic = new Logic(ctx, mHistory, mDisplay);
+		mLogic = new ScientificLogic(ctx, mHistory, mDisplay);
 		mLogic.setDeleteMode(mPersist.getDeleteMode());
 		mLogic.setLineLength(mDisplay.getMaxDigits());
 		HistoryAdapter historyAdapter = new HistoryAdapter(ctx, mHistory,

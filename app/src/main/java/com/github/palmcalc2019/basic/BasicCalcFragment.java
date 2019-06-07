@@ -36,7 +36,7 @@ import android.widget.*;
 
 import com.github.palmcalc2019.palmcalc.R;
 
-public class BasicCalcFragment extends Fragment implements Logic.Listener {
+public class BasicCalcFragment extends Fragment implements BasicLogic.Listener {
 
 	SharedPreferences sharedPref;
 	static SharedPreferences.Editor shared_editor;
@@ -48,7 +48,7 @@ public class BasicCalcFragment extends Fragment implements Logic.Listener {
 	CalculatorDisplay mDisplay;
 	private Persist mPersist;
 	private History mHistory;
-	private Logic mLogic;
+	private BasicLogic mLogic;
 	ViewPager mPager;
 	static InputMethodManager imm;
 
@@ -84,7 +84,7 @@ public class BasicCalcFragment extends Fragment implements Logic.Listener {
 		mPersist = new Persist(ctx);
 		mPersist.load();
 		mHistory = mPersist.history;
-		mLogic = new Logic(ctx, mHistory, mDisplay);
+		mLogic = new BasicLogic(ctx, mHistory, mDisplay);
 		mLogic.setDeleteMode(mPersist.getDeleteMode());
 		mLogic.setLineLength(mDisplay.getMaxDigits());
 		HistoryAdapter historyAdapter = new HistoryAdapter(ctx, mHistory,
@@ -169,7 +169,7 @@ public class BasicCalcFragment extends Fragment implements Logic.Listener {
 	}
 
 	private void updateDeleteMode() {
-		if (mLogic.getDeleteMode() == Logic.DELETE_MODE_BACKSPACE) {
+		if (mLogic.getDeleteMode() == BasicLogic.DELETE_MODE_BACKSPACE) {
 
 		}
 	}
