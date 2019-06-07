@@ -1,4 +1,4 @@
-/**
+/*
  * <Palmcalc is a multipurpose application consisting of calculators, converters
  * and world clock> Copyright (C) <2013> <Cybrosys Technologies pvt. ltd.>
  * 
@@ -16,19 +16,38 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  **/
 
-package com.github.palmcalc2019.basic;
+package com.github.palmcalc2019.scientific;
 
+import android.text.ClipboardManager;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Typeface;
-import android.text.ClipboardManager;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.view.ActionMode;
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.view.View;
+import android.widget.TextView;
+
+// Java Packages
+import java.lang.Class;
+import java.lang.NoSuchMethodException;
+import java.lang.reflect.Method;
+
+import com.github.palmcalc2019.palmcalc.R;
+
 import android.view.*;
 import android.widget.*;
-import android.widget.AdapterView.OnItemClickListener;
 
 import com.github.palmcalc2019.palmcalc.R;
 
@@ -122,9 +141,11 @@ public class CalculatorEditText extends EditText {
 		}
 	}
 
+	// show the dialog on long pressing the editTetxt in the Calculator display
+
 	private void show() {
 
-		final Dialog dialog = new Dialog(BasicCalcFragment.ctx,
+		final Dialog dialog = new Dialog(ScientificCalcFragment.ctx,
 				R.style.AlertDialogCustom);
 
 		dialog.setContentView(R.layout.custom_clip);
@@ -132,27 +153,24 @@ public class CalculatorEditText extends EditText {
 		dialog.setTitle("Clipboard");
 		ListView lstvOpt = (ListView) dialog.findViewById(R.id.lstvOpt);
 
-		ma = adapterM.createFromResource(BasicCalcFragment.ctx,
+		ma = adapterM.createFromResource(ScientificCalcFragment.ctx,
 				R.array.strContext, R.layout.sci_clip);
 		CharSequence primaryClip = getClipText();
 		if (getText().length() == 0) {
 			if (primaryClip == null || !canPaste(primaryClip)) {
-				ma = adapterM.createFromResource(
-						BasicCalcFragment.ctx,
+				ma = adapterM.createFromResource(ScientificCalcFragment.ctx,
 						R.array.strContextEmpty, R.layout.sci_clip);
 			} else {
-				ma = adapterM.createFromResource(
-						BasicCalcFragment.ctx,
+				ma = adapterM.createFromResource(ScientificCalcFragment.ctx,
 						R.array.strContextEm, R.layout.sci_clip);
 			}
 		} else if (getText().length() > 0) {
 			if (primaryClip == null || !canPaste(primaryClip)) {
-				ma = adapterM.createFromResource(
-						BasicCalcFragment.ctx,
+				ma = adapterM.createFromResource(ScientificCalcFragment.ctx,
 						R.array.strContextHa, R.layout.sci_clip);
 
 			} else
-				ma = adapterM.createFromResource(BasicCalcFragment.ctx,
+				ma = adapterM.createFromResource(ScientificCalcFragment.ctx,
 						R.array.strContext, R.layout.sci_clip);
 		}
 
@@ -233,6 +251,7 @@ public class CalculatorEditText extends EditText {
 		clipboard.setText(clip);
 	}
 
+	// To copy selected content from display to clipboard
 	private void copyContent() {
 		final Editable text = getText();
 		int inTextLength = text.length();
@@ -244,6 +263,7 @@ public class CalculatorEditText extends EditText {
 		setSelection(inTextLength);
 	}
 
+	// To cut selected content from display to clipboard
 	private void cutContent() {
 		final Editable text = getText();
 		int inTextLength = text.length();
@@ -268,6 +288,7 @@ public class CalculatorEditText extends EditText {
 		}
 	}
 
+	// check if the clipboard contents are float
 	private boolean canPaste(CharSequence paste) {
 		boolean canPaste = true;
 		try {
