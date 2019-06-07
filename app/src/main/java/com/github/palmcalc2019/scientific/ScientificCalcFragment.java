@@ -254,7 +254,7 @@ public class ScientificCalcFragment extends Fragment implements ScientificLogic.
 
 	// To clear history
 	private void clearHist() {
-		History.clearHIst();
+		History.clearHistory();
 		Toast.makeText(ctx, "History Cleared", Toast.LENGTH_SHORT).show();
 	}
 

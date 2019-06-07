@@ -36,13 +36,11 @@ public class History {
 	private static final int inMaxEntries = 100;
 	Vector<HistoryEntry> mEntries = new Vector<HistoryEntry>();
 	static String strPrefname = "myHistpref";
-	static SharedPreferences shPref;
-	static SharedPreferences.Editor spEditor;
-	int inPos;
-	BaseAdapter mObserver;
+	private static SharedPreferences shPref;
+	private int inPos;
+	private BaseAdapter mObserver;
 
 	History() {
-
 		clear();
 	}
 
@@ -103,17 +101,15 @@ public class History {
 		return false;
 	}
 
-	static void clearHIst() {
-		shPref = ScientificCalcFragment.ctx.getSharedPreferences(strPrefname, 0);
-		spEditor = shPref.edit();
+	public static void clearHistory() {
+		SharedPreferences.Editor spEditor = shPref.edit();
 		spEditor.clear();
 		spEditor.commit();
 	}
 
 	public void enter(String strText) {
 		current().clearEdited();
-		shPref = ScientificCalcFragment.ctx.getSharedPreferences(strPrefname, 0);
-		spEditor = shPref.edit();
+		SharedPreferences.Editor spEditor = shPref.edit();
 		int inI = shPref.getInt("HistIndex", 0);
 		if (mEntries.size() >= inMaxEntries) {
 			mEntries.remove(0);

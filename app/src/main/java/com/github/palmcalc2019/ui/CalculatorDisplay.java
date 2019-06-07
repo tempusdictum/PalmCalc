@@ -27,6 +27,7 @@ import android.text.method.NumberKeyListener;
 import android.util.AttributeSet;
 import android.view.animation.TranslateAnimation;
 import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ViewSwitcher;
 
@@ -147,7 +148,8 @@ public class CalculatorDisplay extends ViewSwitcher {
 		EditText etxtEditText = (EditText) getNextView();
 		etxtEditText.setTextColor(Color.parseColor("#000000"));
 		etxtEditText.setText(text);
-		ScientificCalcFragment.imm.hideSoftInputFromWindow(
+        ((InputMethodManager)getContext().getSystemService(Context.INPUT_METHOD_SERVICE))
+                .hideSoftInputFromWindow(
 				etxtEditText.getWindowToken(), 0);
 		try {
 			etxtEditText.setSelection(text.length());
