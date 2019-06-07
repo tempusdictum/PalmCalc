@@ -28,15 +28,16 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 
 import android.content.Context;
+import android.util.Log;
 
-class Persist {
+public class Persist {
 	private static final int inLastVersion = 2;
 	private static final String strFilename = "calculator.txt";
 	private Context mContext;
 	History history = new History();
 	private int inDelMode;
 
-	Persist(Context context) {
+	public Persist(Context context) {
 		this.mContext = context;
 	}
 
@@ -63,9 +64,9 @@ class Persist {
 			history = new History(inVersion, in);
 			in.close();
 		} catch (FileNotFoundException e) {
-			ScientificCalcFragment.log("" + e);
+			Log.e("Persist", "" + e);
 		} catch (IOException e) {
-			ScientificCalcFragment.log("" + e);
+			Log.e("Persist", "" + e);
 		}
 	}
 
@@ -79,7 +80,7 @@ class Persist {
 			history.write(out);
 			out.close();
 		} catch (IOException e) {
-			ScientificCalcFragment.log("" + e);
+			Log.e("Persist", "" + e);
 		}
 	}
 }

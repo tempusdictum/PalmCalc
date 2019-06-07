@@ -31,12 +31,12 @@ import org.javia.arity.SyntaxException;
 
 import java.util.Vector;
 
-class HistoryAdapter extends BaseAdapter {
+public class HistoryAdapter extends BaseAdapter {
     private Vector<HistoryEntry> mEntries;
 	private LayoutInflater mInflater;
 	private Logic mEval;
 
-	HistoryAdapter(Context context, History history, Logic evaluator) {
+	public HistoryAdapter(Context context, History history, Logic evaluator) {
 		mEntries = history.mEntries;
 		// mInflater = (LayoutInflater)
 		// context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);

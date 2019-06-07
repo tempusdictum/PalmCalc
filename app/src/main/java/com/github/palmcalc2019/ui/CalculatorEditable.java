@@ -21,7 +21,7 @@ import android.text.Editable;
 import android.text.SpannableStringBuilder;
 
 
-class CalculatorEditable extends SpannableStringBuilder {
+public class CalculatorEditable extends SpannableStringBuilder {
 	private static final char[] ORIGINALS = { '-', '*', '/' };
 	private static final char[] REPLACEMENTS = { '-', '\u00d7', '\u00f7' };
 	private boolean isInsideReplace = false;
@@ -76,14 +76,14 @@ class CalculatorEditable extends SpannableStringBuilder {
 			if (chText == Logic.chMinus && chPrevChar == Logic.chMinus) {
 				return super.replace(inStart, inEnd, "");
 			}
-			if (Logic.isOperator(chText)) {
-				while (Logic.isOperator(chPrevChar)
+			if (mLogic.isOperator(chText)) {
+				while (mLogic.isOperator(chPrevChar)
 						&& (chText != Logic.chMinus || chPrevChar == '+')) {
 					--inStart;
 					chPrevChar = inStart > 0 ? charAt(inStart - 1) : '\0';
 				}
 			}
-			if (inStart == 0 && Logic.isOperator(chText)
+			if (inStart == 0 && mLogic.isOperator(chText)
 					&& chText != Logic.chMinus) {
 				return super.replace(inStart, inEnd, "");
 			}

@@ -33,7 +33,7 @@ import android.widget.ViewSwitcher;
 /**
  * Provides vertical scrolling for the input/result EditText.
  */
-class CalculatorDisplay extends ViewSwitcher {
+public class CalculatorDisplay extends ViewSwitcher {
 	// maximum digits
 	private static final String strMAX_DIGITS = "maxDigits";
 	private static final int inMax_Digits = 13;

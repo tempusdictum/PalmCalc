@@ -31,7 +31,7 @@ import java.util.regex.Pattern;
  * Keeps track of the Calculation history
  *
  */
-class History {
+public class History {
 	private static final int inVersion = 1;
 	private static final int inMaxEntries = 100;
 	Vector<HistoryEntry> mEntries = new Vector<HistoryEntry>();
@@ -58,7 +58,7 @@ class History {
 		}
 	}
 
-	void setObserver(BaseAdapter observer) {
+	public void setObserver(BaseAdapter observer) {
 		mObserver = observer;
 	}
 

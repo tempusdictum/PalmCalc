@@ -35,7 +35,7 @@ import androidx.appcompat.widget.AppCompatButton;
 /**
  * Button with click-animation effect.
  */
-class ColorButton extends AppCompatButton implements OnClickListener {
+public class ColorButton extends AppCompatButton implements OnClickListener {
 	int CLICK_FEEDBACK_COLOR;
 	static final int CLICK_FEEDBACK_INTERVAL = 10;
 	static final int CLICK_FEEDBACK_DURATION = 350;
@@ -46,12 +46,12 @@ class ColorButton extends AppCompatButton implements OnClickListener {
 	OnClickListener mListener;
 	Paint mFeedbackPaint;
 
-	public ColorButton(Context context, AttributeSet attrs) {
+	public ColorButton(Context context, AttributeSet attrs, OnClickListener mListener ) {
 		super(context, attrs);
 		if (!isInEditMode()) {
 			PalmCalcActivity calc = (PalmCalcActivity) context;
 			init(calc);
-			mListener = BasicCalcFragment.mListener;
+			this.mListener = mListener;
 			setOnClickListener(this);
 		}
 	}
