@@ -22,86 +22,86 @@ import com.github.palmcalc2019.palmcalc.R;
 
 public class TemperatureStrategy implements Strategy {
 	public double Convert(String from, String to, double input) {
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.temperatureunitc)) && to
-				.equals((AndroidQAActivity.getInstance().getActivity()
+				.equals((ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.temperatureunitf))))) {
 			double ret = (input * 9 / 5) + 32;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.temperatureunitc)) && to
-				.equals((AndroidQAActivity.getInstance().getActivity()
+				.equals((ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.temperatureunitk))))) {
 			double ret = input + 273.15;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.temperatureunitc)) && to
-				.equals((AndroidQAActivity.getInstance().getActivity()
+				.equals((ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.temperatureunitR))))) {
 			double ret = (input * 9 / 5) + 32 + 459.67;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.temperatureunitf)) && to
-				.equals((AndroidQAActivity.getInstance().getActivity()
+				.equals((ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.temperatureunitc))))) {
 			double ret = (input - 32) * 5 / 9;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.temperatureunitf)) && to
-				.equals((AndroidQAActivity.getInstance().getActivity()
+				.equals((ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.temperatureunitk))))) {
 			double ret = (input - 32) * 5 / 9 + 273.15;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.temperatureunitf)) && to
-				.equals((AndroidQAActivity.getInstance().getActivity()
+				.equals((ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.temperatureunitR))))) {
 			double ret = (input + 459.67);
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.temperatureunitk)) && to
-				.equals((AndroidQAActivity.getInstance().getActivity()
+				.equals((ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.temperatureunitc))))) {
 			double ret = input - 273.15;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.temperatureunitk)) && to
-				.equals((AndroidQAActivity.getInstance().getActivity()
+				.equals((ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.temperatureunitf))))) {
 			double ret = (input - 273.15) * 9 / 5 + 32;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.temperatureunitk)) && to
-				.equals((AndroidQAActivity.getInstance().getActivity()
+				.equals((ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.temperatureunitR))))) {
 			double ret = input * 1.8;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.temperatureunitR)) && to
-				.equals((AndroidQAActivity.getInstance().getActivity()
+				.equals((ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.temperatureunitc))))) {
 			double ret = (input - 32 - 459.67) / 1.8;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.temperatureunitR)) && to
-				.equals((AndroidQAActivity.getInstance().getActivity()
+				.equals((ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.temperatureunitf))))) {
 			double ret = (input - 459.67);
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.temperatureunitR)) && to
-				.equals((AndroidQAActivity.getInstance().getActivity()
+				.equals((ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.temperatureunitk))))) {
 			double ret = (input / 1.8);
 			return ret;

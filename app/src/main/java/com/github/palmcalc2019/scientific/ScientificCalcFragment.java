@@ -45,7 +45,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ScientificActivity extends Fragment implements Logic.Listener {
+public class ScientificCalcFragment extends Fragment implements Logic.Listener {
 
 	SharedPreferences sharedPref;
 	static SharedPreferences.Editor shared_editor;

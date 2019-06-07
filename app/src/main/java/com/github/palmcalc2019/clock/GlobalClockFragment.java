@@ -50,7 +50,7 @@ import android.widget.Toast;
 import com.github.palmcalc2019.palmcalc.R;
 import com.github.palmcalc2019.palmcalc.PalmCalcActivity;
 
-public class GlobalClockActivity extends Fragment implements
+public class GlobalClockFragment extends Fragment implements
 		OnClickListener {
 	Button btnRemove;
 	Button btnSave;

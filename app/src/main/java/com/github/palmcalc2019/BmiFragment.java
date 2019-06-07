@@ -16,7 +16,7 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  **/
 
-package com.github.palmcalc2019.bmi;
+package com.github.palmcalc2019;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -38,7 +38,7 @@ import com.github.palmcalc2019.unit.OnWheelChangedListener;
 import com.github.palmcalc2019.unit.OnWheelScrollListener;
 import com.github.palmcalc2019.unit.WheelView;
 
-public class bmiactivity extends Fragment {
+public class BmiFragment extends Fragment {
 
 	private boolean wheelScrolled = false;
 	Bundle savedstate;

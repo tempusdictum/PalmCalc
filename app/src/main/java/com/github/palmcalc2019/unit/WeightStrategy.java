@@ -24,142 +24,142 @@ public class WeightStrategy implements Strategy {
 
 	// To convert values with conversion factor
 	public double Convert(String from, String to, double input) {
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.weightunitkg)) && to
-				.equals(AndroidQAActivity.getInstance().getActivity()
+				.equals(ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.weightunitgm)))) {
 			double ret = input * 1000;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.weightunitgm)) && to
-				.equals(AndroidQAActivity.getInstance().getActivity()
+				.equals(ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.weightunitkg)))) {
 			double ret = input * 0.001;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.weightunitkg)) && to
-				.equals(AndroidQAActivity.getInstance().getActivity()
+				.equals(ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.weightunitlb)))) {
 			double ret = input * 2.204622621849;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.weightunitlb)) && to
-				.equals(AndroidQAActivity.getInstance().getActivity()
+				.equals(ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.weightunitkg)))) {
 			double ret = input * 0.45359237;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.weightunitkg)) && to
-				.equals(AndroidQAActivity.getInstance().getActivity()
+				.equals(ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.weightunitounce)))) {
 			double ret = input * 0.45359237;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.weightunitounce)) && to
-				.equals(AndroidQAActivity.getInstance().getActivity()
+				.equals(ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.weightunitkg)))) {
 			double ret = input * 0.028349523125;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.weightunitkg)) && to
-				.equals(AndroidQAActivity.getInstance().getActivity()
+				.equals(ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.weightunitmg)))) {
 			double ret = input * 1000000;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.weightunitmg)) && to
-				.equals(AndroidQAActivity.getInstance().getActivity()
+				.equals(ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.weightunitkg)))) {
 			double ret = input * 0.000001;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.weightunitgm)) && to
-				.equals(AndroidQAActivity.getInstance().getActivity()
+				.equals(ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.weightunitlb)))) {
 			double ret = input * 0.002204622621849;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.weightunitlb)) && to
-				.equals(AndroidQAActivity.getInstance().getActivity()
+				.equals(ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.weightunitgm)))) {
 			double ret = input * 453.59237;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.weightunitgm)) && to
-				.equals(AndroidQAActivity.getInstance().getActivity()
+				.equals(ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.weightunitmg)))) {
 			double ret = input * 1000;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.weightunitmg)) && to
-				.equals(AndroidQAActivity.getInstance().getActivity()
+				.equals(ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.weightunitgm)))) {
 			double ret = input * 0.001;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.weightunitgm)) && to
-				.equals(AndroidQAActivity.getInstance().getActivity()
+				.equals(ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.weightunitounce)))) {
 			double ret = input * 0.03527396194958;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.weightunitounce)) && to
-				.equals(AndroidQAActivity.getInstance().getActivity()
+				.equals(ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.weightunitgm)))) {
 			double ret = input * 28.349523125;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.weightunitlb)) && to
-				.equals(AndroidQAActivity.getInstance().getActivity()
+				.equals(ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.weightunitmg)))) {
 			double ret = input * 453592.37;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.weightunitmg)) && to
-				.equals(AndroidQAActivity.getInstance().getActivity()
+				.equals(ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.weightunitlb)))) {
 			double ret = input * 0.000002204622621849;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.weightunitounce)) && to
-				.equals(AndroidQAActivity.getInstance().getActivity()
+				.equals(ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.weightunitmg)))) {
 			double ret = input * 28349.523125;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.weightunitmg)) && to
-				.equals(AndroidQAActivity.getInstance().getActivity()
+				.equals(ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.weightunitounce)))) {
 			double ret = input * 0.00003527396194958;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.weightunitlb)) && to
-				.equals(AndroidQAActivity.getInstance().getActivity()
+				.equals(ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.weightunitounce)))) {
 			double ret = input * 16;
 			return ret;
 		}
-		if ((from.equals(AndroidQAActivity.getInstance().getActivity()
+		if ((from.equals(ConverterFragment.getInstance().getActivity()
 				.getResources().getString(R.string.weightunitounce)) && to
-				.equals(AndroidQAActivity.getInstance().getActivity()
+				.equals(ConverterFragment.getInstance().getActivity()
 						.getResources().getString(R.string.weightunitlb)))) {
 			double ret = input * 0.0625;
 			return ret;

@@ -105,7 +105,7 @@ class History {
 	}
 
 	static void clearHIst() {
-		shPref = BasicActivity.ctx.getSharedPreferences(strPrefname, 0);
+		shPref = BasicCalcFragment.ctx.getSharedPreferences(strPrefname, 0);
 		spEditor = shPref.edit();
 		spEditor.clear();
 		spEditor.commit();
@@ -114,7 +114,7 @@ class History {
 
 	void enter(String strText) {
 		current().clearEdited();
-		shPref = BasicActivity.ctx.getSharedPreferences(strPrefname, 0);
+		shPref = BasicCalcFragment.ctx.getSharedPreferences(strPrefname, 0);
 		spEditor = shPref.edit();
 		int inI = shPref.getInt("HistIndex", 0);
 		if (mEntries.size() >= inMaxEntries) {

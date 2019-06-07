@@ -145,7 +145,7 @@ class CalculatorDisplay extends ViewSwitcher {
 		EditText etxtEditText = (EditText) getNextView();
 		etxtEditText.setTextColor(Color.parseColor("#000000"));
 		etxtEditText.setText(text);
-		ScientificActivity.imm.hideSoftInputFromWindow(
+		ScientificCalcFragment.imm.hideSoftInputFromWindow(
 				etxtEditText.getWindowToken(), 0);
 		try {
 			etxtEditText.setSelection(text.length());

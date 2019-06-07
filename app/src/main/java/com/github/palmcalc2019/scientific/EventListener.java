@@ -608,7 +608,7 @@ class EventListener implements View.OnKeyListener, OnClickListener,
 	// set calculation mode to FSE
 	public void setFSE() {
 		String strDisplay = "" + 0;
-		String strMode = ScientificActivity.txtvFSE.getText().toString();
+		String strMode = ScientificCalcFragment.txtvFSE.getText().toString();
 
 		if (strMode.contains("FIX")) {
 			mode(strDisplay, 1);
@@ -698,7 +698,7 @@ class EventListener implements View.OnKeyListener, OnClickListener,
 	// For showing the calculation history
 	@SuppressWarnings("deprecation")
 	public void showHistory() {
-		shPref = ScientificActivity.ctx.getSharedPreferences("myHistpref", 0);
+		shPref = ScientificCalcFragment.ctx.getSharedPreferences("myHistpref", 0);
 		int inSize = shPref.getInt("HistIndex", 0);
 		System.out.println("" + inSize);
 		String[] str = new String[inSize];
@@ -743,7 +743,7 @@ class EventListener implements View.OnKeyListener, OnClickListener,
 				txtvHistory[inJ] = new TextView(ctx);
 				txtvHistory[inJ].setText("" + (inJ + 1));
 				txtvHistory[inJ].setGravity(Gravity.CENTER);
-				txtvHistory[inJ].setTextColor(ScientificActivity.ctx
+				txtvHistory[inJ].setTextColor(ScientificCalcFragment.ctx
 						.getResources().getColor(R.color.HistColor));
 				txtvHistory[inJ].setLayoutParams(textParams);
 				btnHistory[inJ].setText(str[inL]);
@@ -790,7 +790,7 @@ class EventListener implements View.OnKeyListener, OnClickListener,
 		vibrate();
 		ctx = PalmCalcActivity.ctx;
 		int id = vwView.getId();
-		ScientificActivity.txtvShift.setText("");
+		ScientificCalcFragment.txtvShift.setText("");
 		switch (id) {
 
 		case R.id.buttonDel:
@@ -881,7 +881,7 @@ class EventListener implements View.OnKeyListener, OnClickListener,
 					txtvHistory[inJ].setLayoutParams(textParams);
 					btnHistory[inJ].setText(strMode[inI]);
 					txtvHistory[inJ].setGravity(Gravity.CENTER);
-					txtvHistory[inJ].setTextColor(ScientificActivity.ctx
+					txtvHistory[inJ].setTextColor(ScientificCalcFragment.ctx
 							.getResources().getColor(R.color.HistColor));
 					btnHistory[inJ].setTextColor(Color.WHITE);
 					btnHistory[inJ].setGravity(Gravity.LEFT);
@@ -897,7 +897,7 @@ class EventListener implements View.OnKeyListener, OnClickListener,
 						@Override
 						public void onClick(View v) {
 							// etxt.setText(btns[inK].getText().toString());
-							ScientificActivity.txtvFSE.setText(btnHistory[inK]
+							ScientificCalcFragment.txtvFSE.setText(btnHistory[inK]
 									.getText().toString());
 							popmW1.dismiss();
 						}
@@ -927,7 +927,7 @@ class EventListener implements View.OnKeyListener, OnClickListener,
 				mHandler.onHypPress();
 			} else {
 				inHyp = 0;
-				ScientificActivity.txtvHyp.setText("");
+				ScientificCalcFragment.txtvHyp.setText("");
 			}
 			break;
 		case R.id.buttonMS:
@@ -1018,7 +1018,7 @@ class EventListener implements View.OnKeyListener, OnClickListener,
 					if (strText.contains("tan(")) {
 						strText = strText.replace("tan(", "tanh(");
 					}
-					ScientificActivity.txtvHyp.setText("");
+					ScientificCalcFragment.txtvHyp.setText("");
 					inHyp = 0;
 				}
 				mHandler.insert(strText);
@@ -1135,7 +1135,7 @@ class EventListener implements View.OnKeyListener, OnClickListener,
 				mHandler.onHypPress();
 			} else {
 				inHyp = 0;
-				ScientificActivity.txtvHyp.setText("");
+				ScientificCalcFragment.txtvHyp.setText("");
 			}
 			break;
 
@@ -1179,7 +1179,7 @@ class EventListener implements View.OnKeyListener, OnClickListener,
 					if (strText.contains("tan(")) {
 						strText = strText.replace("tan(", "tanh(");
 					}
-					ScientificActivity.txtvHyp.setText("");
+					ScientificCalcFragment.txtvHyp.setText("");
 					inHyp = 0;
 				}
 				mHandler.insert(strText);
@@ -1531,7 +1531,7 @@ class EventListener implements View.OnKeyListener, OnClickListener,
 					@Override
 					public void onClick(View v) {
 						PreferenceClass.setMyIntPref(ctx, inK);
-						ScientificActivity.txtvFSE.setText("FIX:" + (inK - 1));
+						ScientificCalcFragment.txtvFSE.setText("FIX:" + (inK - 1));
 						popmW1.dismiss();
 					}
 				});
@@ -1547,7 +1547,7 @@ class EventListener implements View.OnKeyListener, OnClickListener,
 					@Override
 					public void onClick(View v) {
 						inP = inK;
-						ScientificActivity.txtvFSE.setText("SCI:" + inK);
+						ScientificCalcFragment.txtvFSE.setText("SCI:" + inK);
 						PreferenceClass.setMyIntPref(ctx, inP);
 						popmW1.dismiss();
 					}

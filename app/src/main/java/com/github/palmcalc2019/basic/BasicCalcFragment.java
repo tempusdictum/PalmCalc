@@ -36,11 +36,11 @@ import android.widget.*;
 
 import com.github.palmcalc2019.palmcalc.R;
 
-public class BasicActivity extends Fragment implements Logic.Listener {
+public class BasicCalcFragment extends Fragment implements Logic.Listener {
 
 	SharedPreferences sharedPref;
 	static SharedPreferences.Editor shared_editor;
-	static EventListener mListener = new EventListener();
+	static ClickAndKeyListener mListener = new ClickAndKeyListener();
 	Button btn9, btn8, btn7, btn6, btn5, btn4, btn3, btn2, btn1, btn0, btnAc,
 			btnDel, btnminus, btnmul;
 	private static final boolean isLogEnabled = false;

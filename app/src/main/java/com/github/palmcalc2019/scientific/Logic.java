@@ -92,7 +92,7 @@ class Logic {
 
 	boolean eatHorizontalMove(boolean isToLeft) {
 		EditText etxtEditText = mDisplay.getEditText();
-		ScientificActivity.imm.hideSoftInputFromWindow(
+		ScientificCalcFragment.imm.hideSoftInputFromWindow(
 				etxtEditText.getWindowToken(), 0);
 		int cursorPos = etxtEditText.getSelectionStart();
 		return isToLeft ? cursorPos == 0 : cursorPos >= etxtEditText.length();
@@ -296,7 +296,7 @@ class Logic {
 		}
 		double dblValue = mSymbols.eval(strInput);
 		String strReslt = "";
-		if (ScientificActivity.txtvFSE.getText().toString()
+		if (ScientificCalcFragment.txtvFSE.getText().toString()
 				.equalsIgnoreCase("Floatpt")) {
 			for (int inPrecision = inLineLength; inPrecision > 6; inPrecision--) {
 				strReslt = tryFormattingWithPrecision(dblValue, inPrecision);
@@ -304,12 +304,12 @@ class Logic {
 					break;
 				}
 			}
-		} else if (ScientificActivity.txtvFSE.getText().toString()
+		} else if (ScientificCalcFragment.txtvFSE.getText().toString()
 				.contains("FIX")) {
 			strReslt = EventListener.fix(dblValue,
 					PreferenceClass.getMyIntPref(EventListener.ctx));
 
-		} else if (ScientificActivity.txtvFSE.getText().toString()
+		} else if (ScientificCalcFragment.txtvFSE.getText().toString()
 				.contains("SCI")) {
 			strReslt = EventListener.sci(dblValue,
 					PreferenceClass.getMyIntPref(EventListener.ctx));
@@ -398,19 +398,19 @@ class Logic {
 
 	// To handle DEG change event
 	public void onDegChange() {
-		if (strCurrentMode.equalsIgnoreCase(ScientificActivity.txtvDeg
+		if (strCurrentMode.equalsIgnoreCase(ScientificCalcFragment.txtvDeg
 				.getText().toString())) {
-			ScientificActivity.txtvDeg.setText("[RAD]");
+			ScientificCalcFragment.txtvDeg.setText("[RAD]");
 			inDeg = 0;
 		} else {
-			ScientificActivity.txtvDeg.setText("[DEG]");
+			ScientificCalcFragment.txtvDeg.setText("[DEG]");
 			inDeg = 1;
 		}
 	}
 
 	// To handle ALT press event
 	public void onShiftPress() {
-		ScientificActivity.txtvShift.setText("[ALT]");
+		ScientificCalcFragment.txtvShift.setText("[ALT]");
 
 	}
 
@@ -421,7 +421,7 @@ class Logic {
 
 	// To handle hyp press event
 	public void onHypPress() {
-		ScientificActivity.txtvHyp.setText("[HYP]");
+		ScientificCalcFragment.txtvHyp.setText("[HYP]");
 	}
 
 	// To handle FSE press event

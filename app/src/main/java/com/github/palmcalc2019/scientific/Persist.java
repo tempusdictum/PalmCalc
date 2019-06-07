@@ -63,9 +63,9 @@ class Persist {
 			history = new History(inVersion, in);
 			in.close();
 		} catch (FileNotFoundException e) {
-			ScientificActivity.log("" + e);
+			ScientificCalcFragment.log("" + e);
 		} catch (IOException e) {
-			ScientificActivity.log("" + e);
+			ScientificCalcFragment.log("" + e);
 		}
 	}
 
@@ -79,7 +79,7 @@ class Persist {
 			history.write(out);
 			out.close();
 		} catch (IOException e) {
-			ScientificActivity.log("" + e);
+			ScientificCalcFragment.log("" + e);
 		}
 	}
 }

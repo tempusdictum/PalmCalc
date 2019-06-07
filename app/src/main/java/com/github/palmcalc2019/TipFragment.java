@@ -16,7 +16,7 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  **/
 
-package com.github.palmcalc2019.tip;
+package com.github.palmcalc2019;
 
 import java.text.NumberFormat;
 
@@ -46,7 +46,7 @@ import com.github.palmcalc2019.unit.OnWheelChangedListener;
 import com.github.palmcalc2019.unit.OnWheelScrollListener;
 import com.github.palmcalc2019.unit.WheelView;
 
-public class TipActivity extends Fragment
+public class TipFragment extends Fragment
 
 {
 	public static String strWhealFontSize = "20";

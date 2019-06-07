@@ -38,7 +38,7 @@ public abstract class AbstractWheelTextAdapter extends AbstractWheelAdapter {
 
 	public static final int LABEL_COLOR = 0xFF700070;
 
-	public static final String DEFAULT_TEXT_SIZE = AndroidQAActivity.strWhealFontSize;
+	public static final String DEFAULT_TEXT_SIZE = ConverterFragment.strWhealFontSize;
 
 	// Text settings
 	private int textColor = DEFAULT_TEXT_COLOR;

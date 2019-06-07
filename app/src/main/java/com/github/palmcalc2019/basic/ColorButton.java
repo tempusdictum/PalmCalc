@@ -51,7 +51,7 @@ class ColorButton extends Button implements OnClickListener {
 		if (!isInEditMode()) {
 			PalmCalcActivity calc = (PalmCalcActivity) context;
 			init(calc);
-			mListener = BasicActivity.mListener;
+			mListener = BasicCalcFragment.mListener;
 			setOnClickListener(this);
 		}
 	}

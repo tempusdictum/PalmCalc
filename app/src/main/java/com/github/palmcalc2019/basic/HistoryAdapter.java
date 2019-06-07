@@ -34,10 +34,10 @@ import java.util.Vector;
 class HistoryAdapter extends BaseAdapter {
 	private Vector<HistoryEntry> mEntries;
 	private LayoutInflater mInflater;
-	private com.github.palmcalc2019.basic.Logic mEval;
+	private Logic mEval;
 
 	HistoryAdapter(Context context, History history,
-			com.github.palmcalc2019.basic.Logic evaluator) {
+                   Logic evaluator) {
 		mEntries = history.mEntries;
 		// mInflater = (LayoutInflater)
 		// context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);

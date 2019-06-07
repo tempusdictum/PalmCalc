@@ -16,7 +16,7 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  **/
 
-package com.github.palmcalc2019.share;
+package com.github.palmcalc2019;
 
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
@@ -35,7 +35,7 @@ import com.github.palmcalc2019.palmcalc.PalmCalcActivity;
 import com.github.palmcalc2019.palmcalc.R;
 
 //fragment showing the share screen
-public class ShareApp extends Fragment {
+public class ShareAppFragment extends Fragment {
 
 	ImageButton btnShare, btnRateus, btnlikeus;
 	TextView webAbout;

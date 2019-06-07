@@ -39,7 +39,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-public class AndroidQAActivity extends Fragment {
+public class ConverterFragment extends Fragment {
 	// setting fontsize of wheel
 	public static String strWhealFontSize = "20";
 	int wheelselection = 0;
@@ -79,7 +79,7 @@ public class AndroidQAActivity extends Fragment {
 	private Strategy lastStrategy;
 	private String unitfrom = "";
 	private String unitto = "";
-	private static AndroidQAActivity instance;
+	private static ConverterFragment instance;
 	String PREFERNAME = "UNITCONVERTERSHARED";
 	WheelView wheelmain;
 	WheelView wheelone;
@@ -416,7 +416,7 @@ public class AndroidQAActivity extends Fragment {
 		}
 	};
 
-	public static AndroidQAActivity getInstance() {
+	public static ConverterFragment getInstance() {
 		return instance;
 	}
 

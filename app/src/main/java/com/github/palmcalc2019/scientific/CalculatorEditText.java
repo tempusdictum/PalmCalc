@@ -138,7 +138,7 @@ public class CalculatorEditText extends EditText {
 
 	private void show() {
 
-		final Dialog dialog = new Dialog(ScientificActivity.ctx,
+		final Dialog dialog = new Dialog(ScientificCalcFragment.ctx,
 				R.style.AlertDialogCustom);
 
 		dialog.setContentView(R.layout.custom_clip);
@@ -146,24 +146,24 @@ public class CalculatorEditText extends EditText {
 		dialog.setTitle("Clipboard");
 		ListView lstvOpt = (ListView) dialog.findViewById(R.id.lstvOpt);
 
-		ma = adapterM.createFromResource(ScientificActivity.ctx,
+		ma = adapterM.createFromResource(ScientificCalcFragment.ctx,
 				R.array.strContext, R.layout.sci_clip);
 		CharSequence primaryClip = getClipText();
 		if (getText().length() == 0) {
 			if (primaryClip == null || !canPaste(primaryClip)) {
-				ma = adapterM.createFromResource(ScientificActivity.ctx,
+				ma = adapterM.createFromResource(ScientificCalcFragment.ctx,
 						R.array.strContextEmpty, R.layout.sci_clip);
 			} else {
-				ma = adapterM.createFromResource(ScientificActivity.ctx,
+				ma = adapterM.createFromResource(ScientificCalcFragment.ctx,
 						R.array.strContextEm, R.layout.sci_clip);
 			}
 		} else if (getText().length() > 0) {
 			if (primaryClip == null || !canPaste(primaryClip)) {
-				ma = adapterM.createFromResource(ScientificActivity.ctx,
+				ma = adapterM.createFromResource(ScientificCalcFragment.ctx,
 						R.array.strContextHa, R.layout.sci_clip);
 
 			} else
-				ma = adapterM.createFromResource(ScientificActivity.ctx,
+				ma = adapterM.createFromResource(ScientificCalcFragment.ctx,
 						R.array.strContext, R.layout.sci_clip);
 		}
 

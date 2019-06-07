@@ -49,13 +49,13 @@ import androidx.fragment.app.FragmentActivity;
 import android.app.ActionBar.Tab;
 import android.view.Menu;
 import android.view.MenuInflater;
-import com.github.palmcalc2019.bmi.bmiactivity;
-import com.github.palmcalc2019.clock.GlobalClockActivity;
-import com.github.palmcalc2019.scientific.ScientificActivity;
-import com.github.palmcalc2019.basic.BasicActivity;
-import com.github.palmcalc2019.share.ShareApp;
-import com.github.palmcalc2019.tip.TipActivity;
-import com.github.palmcalc2019.unit.AndroidQAActivity;
+import com.github.palmcalc2019.BmiFragment;
+import com.github.palmcalc2019.clock.GlobalClockFragment;
+import com.github.palmcalc2019.scientific.ScientificCalcFragment;
+import com.github.palmcalc2019.basic.BasicCalcFragment;
+import com.github.palmcalc2019.ShareAppFragment;
+import com.github.palmcalc2019.TipFragment;
+import com.github.palmcalc2019.unit.ConverterFragment;
 import com.github.palmcalc2019.scientific.Demoscreen;
 
 /**
@@ -152,13 +152,13 @@ public class PalmCalcActivity extends FragmentActivity implements
 		}
 
 		// adding the fragments to the tabs adapter class
-		mTabsAdapter.addTab(bar.newTab(), ScientificActivity.class, null);
-		mTabsAdapter.addTab(bar.newTab(), AndroidQAActivity.class, null);
-		mTabsAdapter.addTab(bar.newTab(), BasicActivity.class, null);
-		mTabsAdapter.addTab(bar.newTab(), TipActivity.class, null);
-		mTabsAdapter.addTab(bar.newTab(), GlobalClockActivity.class, null);
-		mTabsAdapter.addTab(bar.newTab(), bmiactivity.class, null);
-		mTabsAdapter.addTab(bar.newTab(), ShareApp.class, null);
+		mTabsAdapter.addTab(bar.newTab(), ScientificCalcFragment.class, null);
+		mTabsAdapter.addTab(bar.newTab(), ConverterFragment.class, null);
+		mTabsAdapter.addTab(bar.newTab(), BasicCalcFragment.class, null);
+		mTabsAdapter.addTab(bar.newTab(), TipFragment.class, null);
+		mTabsAdapter.addTab(bar.newTab(), GlobalClockFragment.class, null);
+		mTabsAdapter.addTab(bar.newTab(), BmiFragment.class, null);
+		mTabsAdapter.addTab(bar.newTab(), ShareAppFragment.class, null);
 
 		StartScreen();
 	}
