@@ -40,7 +40,7 @@ public class BasicCalcFragment extends Fragment implements Logic.Listener {
 
 	SharedPreferences sharedPref;
 	static SharedPreferences.Editor shared_editor;
-	static ClickAndKeyListener mListener = new ClickAndKeyListener();
+	static EventListener mListener = new EventListener();
 	Button btn9, btn8, btn7, btn6, btn5, btn4, btn3, btn2, btn1, btn0, btnAc,
 			btnDel, btnminus, btnmul;
 	private static final boolean isLogEnabled = false;

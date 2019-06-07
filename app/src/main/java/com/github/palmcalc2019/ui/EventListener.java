@@ -16,7 +16,7 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  **/
 
-package com.github.palmcalc2019.scientific;
+package com.github.palmcalc2019.ui;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -51,6 +51,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.util.Log;
 
 class EventListener implements View.OnKeyListener, OnClickListener,
 		View.OnLongClickListener {
@@ -72,7 +73,11 @@ class EventListener implements View.OnKeyListener, OnClickListener,
 	TableLayout tblltTable;
 	Logic mHandler;
 	ViewPager mPager;
+<<<<<<< HEAD
 	private Symbols mSymbols = new Symbols();
+=======
+	// private Symbols mSymbols = new Symbols();
+>>>>>>> basic
 	int inShift = 0, inHyp = 0;
 	public static Context ctx = PalmCalcActivity.ctx;
 	static SharedPreferences spMemory;
@@ -682,6 +687,7 @@ class EventListener implements View.OnKeyListener, OnClickListener,
 			Toast.makeText(ctx, "Save Failed!", Toast.LENGTH_SHORT).show();
 	}
 
+	// vibrate
 	public void vibrate() {
 		SharedPreferences sharedPrefs = PreferenceManager
 				.getDefaultSharedPreferences(PalmCalcActivity.ctx);
@@ -696,7 +702,6 @@ class EventListener implements View.OnKeyListener, OnClickListener,
 	}
 
 	// For showing the calculation history
-	@SuppressWarnings("deprecation")
 	public void showHistory() {
 		shPref = ScientificCalcFragment.ctx.getSharedPreferences("myHistpref", 0);
 		int inSize = shPref.getInt("HistIndex", 0);
@@ -783,18 +788,22 @@ class EventListener implements View.OnKeyListener, OnClickListener,
 		}
 	}
 
-	@SuppressWarnings("deprecation")
-	@SuppressLint("NewApi")
+	// click handler
 	@Override
 	public void onClick(View vwView) {
 		vibrate();
 		ctx = PalmCalcActivity.ctx;
 		int id = vwView.getId();
+<<<<<<< HEAD
 		ScientificCalcFragment.txtvShift.setText("");
+=======
+
+>>>>>>> basic
 		switch (id) {
 
 		case R.id.buttonDel:
 			mHandler.onDelete();
+<<<<<<< HEAD
 			break;
 		case R.id.button3:
 			if (inShift == 0)
@@ -1021,6 +1030,18 @@ class EventListener implements View.OnKeyListener, OnClickListener,
 					ScientificCalcFragment.txtvHyp.setText("");
 					inHyp = 0;
 				}
+=======
+
+		case R.id.ButtonEqual:
+			mHandler.onEnter();
+			break;
+		default:
+			if (vwView instanceof Button) {
+				String strText = ((Button) vwView).getTag().toString();
+				System.out.println(strText);
+				Log.d("PALMER", strText);
+
+>>>>>>> basic
 				mHandler.insert(strText);
 
 			}
@@ -1050,7 +1071,6 @@ class EventListener implements View.OnKeyListener, OnClickListener,
 	}
 
 	// Memory read function
-	@SuppressWarnings("deprecation")
 	private void Memread() {
 		spMemory = ctx.getSharedPreferences(PREFNAME, 0);
 
