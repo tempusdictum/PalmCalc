@@ -1,4 +1,4 @@
-/**
+/*
  * <Palmcalc is a multipurpose application consisting of calculators, converters
  * and world clock> Copyright (C) <2013> <Cybrosys Technologies pvt. ltd.>
  * 
@@ -25,73 +25,26 @@ import com.github.palmcalc2019.ui.History;
 import com.github.palmcalc2019.ui.HistoryAdapter;
 import com.github.palmcalc2019.ui.Logic;
 
-import android.text.TextUtils;
-import android.view.KeyEvent;
 import android.widget.EditText;
 import android.content.Context;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
-import java.util.Locale;
 
-import org.javia.arity.Symbols;
 import org.javia.arity.SyntaxException;
 
 class ScientificLogic extends Logic {
-	private CalculatorDisplay mDisplay;
-	private static final String strInfinityUnicode = "\u221e";
-	public static final String strMarker = "?";
-	private static final String strInfin = "Infinity";
-	private static final String strNan = "NaN";
 
-	private final String strErrorString;
-	public final static int inDelModeBa = 0;
-	public final static int inDelModClea = 1;
-	private int mDeleteMode = inDelModeBa;
-	private Symbols mSymbols = new Symbols();
-	private History mHistory;
-	private boolean isError = false;
-	private int inLineLength = 0;
-	private Context ctx;
-	static int inDeg = 1;
-	String strResult = "";
-	String strPrefName = "mypref";
-	HistoryAdapter hst;
-	String strCurrentMode = "[DEG]";
-	int inModeFlag = 0;
-
-	public interface Listener {
-		void onDeleteModeChange();
-	}
-
-	private Listener mListener;
+	private static int inDeg = 1;
+	private HistoryAdapter hst;
+	private String strCurrentMode = "[DEG]";
+	private int inModeFlag = 0;
 
 	ScientificLogic(Context context, History history, CalculatorDisplay display) {
-		strErrorString = context.getResources().getString(R.string.error);
-		mHistory = history;
-		mDisplay = display;
+	    super(history, display);
+		mErrorString = context.getResources().getString(R.string.error);
 		mDisplay.setLogic(this);
-		context = ctx;
 		hst = new HistoryAdapter(context, mHistory, this);
-	}
-
-	public void setListener(Listener listener) {
-		this.mListener = listener;
-	}
-
-	public void setDeleteMode(int mode) {
-		if (mDeleteMode != mode) {
-			mDeleteMode = mode;
-			mListener.onDeleteModeChange();
-		}
-	}
-
-	public int getDeleteMode() {
-		return mDeleteMode;
-	}
-
-	void setLineLength(int inDigits) {
-		inLineLength = inDigits;
 	}
 
 	boolean eatHorizontalMove(boolean isToLeft) {
@@ -100,84 +53,6 @@ class ScientificLogic extends Logic {
 				etxtEditText.getWindowToken(), 0);
 		int cursorPos = etxtEditText.getSelectionStart();
 		return isToLeft ? cursorPos == 0 : cursorPos >= etxtEditText.length();
-	}
-
-	private String getText() {
-
-		return mDisplay.getText().toString();
-	}
-
-	@Override
-	public void insert(String strDelta) {
-		mDisplay.insert(strDelta);
-		setDeleteMode(inDelModeBa);
-	}
-
-	public void resumeWithHistory() {
-		clearWithHistory(false);
-	}
-
-	private void clearWithHistory(boolean isScroll) {
-
-		String strText = mHistory.getText();
-
-		if (strMarker.equals(strText)) {
-			if (!mHistory.moveToPrevious()) {
-				strText = "";
-			}
-			strText = mHistory.getText();
-			evaluateAndShowResult(strText, CalculatorDisplay.Scroll.NONE);
-		} else {
-			strResult = "";
-			mDisplay.setText(strText, isScroll ? CalculatorDisplay.Scroll.UP
-					: CalculatorDisplay.Scroll.NONE);
-			isError = false;
-		}
-	}
-
-	private void clear(boolean isScroll) {
-		mHistory.enter("");
-		mDisplay.setText("", isScroll ? CalculatorDisplay.Scroll.UP
-				: CalculatorDisplay.Scroll.NONE);
-		cleared();
-	}
-    @Override
-	public void cleared() {
-		strResult = "";
-		isError = false;
-		updateHistory();
-		setDeleteMode(inDelModeBa);
-	}
-
-	@Override
-	public boolean acceptInsert(String strDelta) {
-		String strText = getText();
-		return !isError
-				&& (!strResult.equals(strText) || isOperator(strDelta) || mDisplay
-						.getSelectionStart() != strText.length());
-	}
-
-	@Override
-	public void onDelete() {
-		if (getText().equals(strResult) || isError) {
-			clear(false);
-		} else {
-			mDisplay.dispatchKeyEvent(new KeyEvent(0, KeyEvent.KEYCODE_DEL));
-			strResult = "";
-		}
-	}
-
-	void onClear() {
-		clear(mDeleteMode == inDelModClea);
-	}
-
-	@Override
-	public void onEnter() {
-		if (mDeleteMode == inDelModClea) {
-			clearWithHistory(false);
-		} else {
-			evaluateAndShowResult(getText(), CalculatorDisplay.Scroll.UP);
-		}
 	}
 
 	void onShow() {
@@ -197,7 +72,7 @@ class ScientificLogic extends Logic {
 	}
 
 	// handle DEG change
-	public String CheckMode(String strText) {
+	public String checkMode(String strText) {
 
 		String strDisplay = strText;
 		if (inDeg == 1) {
@@ -239,60 +114,27 @@ class ScientificLogic extends Logic {
 				return false;
 		} else
 			return true;
-
 	}
 
 	// function shows the result by reading input
 	public void evaluateAndShowResult(String strText, Scroll scroll) {
 		if (getBracketCount(strText)) {
 			try {
-
-				String strReslt = evaluate(CheckMode(strText));
+				String strReslt = evaluate(checkMode(strText));
 				if (!strText.equals(strReslt) && !strText.equalsIgnoreCase("")) {
 					mHistory.enter(strReslt);
-					strResult = strReslt;
-					mDisplay.setText(strResult, scroll);
+					mResult = strReslt;
+					mDisplay.setText(mResult, scroll);
 				}
 			} catch (SyntaxException inExp) {
-				isError = true;
-				strResult = strErrorString;
-				mDisplay.setText(strResult, scroll);
+				mIsError = true;
+				mResult = mErrorString;
+				mDisplay.setText(mResult, scroll);
 			}
 		} else {
-			isError = true;
-			strResult = strErrorString;
-			mDisplay.setText(strResult, scroll);
-		}
-	}
-
-	void onUp() {
-		String strText = getText();
-		if (!strText.equals(strResult)) {
-			mHistory.update(strText);
-		}
-		if (mHistory.moveToPrevious()) {
-			mDisplay.setText(mHistory.getText(), CalculatorDisplay.Scroll.DOWN);
-		}
-	}
-
-	void onDown() {
-		String strText = getText();
-		if (!strText.equals(strResult)) {
-			mHistory.update(strText);
-		}
-		if (mHistory.moveToNext()) {
-			mDisplay.setText(mHistory.getText(), CalculatorDisplay.Scroll.UP);
-		}
-	}
-
-	void updateHistory() {
-		String strText = getText();
-		if (!TextUtils.isEmpty(strText)
-				&& !TextUtils.equals(strText, strErrorString)
-				&& strText.equals(strResult)) {
-			mHistory.update(strMarker);
-		} else {
-			mHistory.update(getText());
+			mIsError = true;
+			mResult = mErrorString;
+			mDisplay.setText(mResult, scroll);
 		}
 	}
 
@@ -300,16 +142,15 @@ class ScientificLogic extends Logic {
 	@Override
 	public String evaluate(String strInput) throws SyntaxException {
 		if (strInput.trim().equals("")) {
-
 			return "";
 		}
 		double dblValue = mSymbols.eval(strInput);
 		String strReslt = "";
 		if (ScientificCalcFragment.txtvFSE.getText().toString()
 				.equalsIgnoreCase("Floatpt")) {
-			for (int inPrecision = inLineLength; inPrecision > 6; inPrecision--) {
+			for (int inPrecision = mLineLength; inPrecision > 6; inPrecision--) {
 				strReslt = tryFormattingWithPrecision(dblValue, inPrecision);
-				if (strReslt.length() <= inLineLength) {
+				if (strReslt.length() <= mLineLength) {
 					break;
 				}
 			}
@@ -323,56 +164,10 @@ class ScientificLogic extends Logic {
 			strReslt = EventListener.sci(dblValue,
 					PreferenceClass.getMyIntPref(EventListener.ctx));
 		}
-		return strReslt.replace('-', chMinus).replace(strInfin,
-				strInfinityUnicode);
+		return strReslt.replace('-', chMinus).replace(INFINITY,
+                INFINITY_UNICODE);
 	}
 
-	// To format the orginal result with predefined precision
-	private String tryFormattingWithPrecision(double dblValue, int inPrecision) {
-		String strReslt = String.format(Locale.US, "%" + inLineLength + "."
-				+ inPrecision + "g", dblValue);
-		if (strReslt.equals(strNan)) {
-			isError = true;
-			return strErrorString;
-		}
-		String strMantissa = strReslt;
-		String strExponent = null;
-		int inExp = strReslt.indexOf('e');
-		if (inExp != -1) {
-			strMantissa = strReslt.substring(0, inExp);
-			strExponent = strReslt.substring(inExp + 1);
-			if (strExponent.startsWith("+")) {
-				strExponent = strExponent.substring(1);
-			}
-			strExponent = String.valueOf(Integer.parseInt(strExponent));
-		} else {
-			strMantissa = strReslt;
-		}
-		int inPeriod = strMantissa.indexOf('.');
-		if (inPeriod == -1) {
-			inPeriod = strMantissa.indexOf(',');
-		}
-		if (inPeriod != -1) {
-			while (strMantissa.length() > 0 && strMantissa.endsWith("0")) {
-				strMantissa = strMantissa
-						.substring(0, strMantissa.length() - 1);
-			}
-			if (strMantissa.length() == inPeriod + 1) {
-				strMantissa = strMantissa
-						.substring(0, strMantissa.length() - 1);
-			}
-		}
-
-		if (strExponent != null) {
-			strReslt = strMantissa + 'e' + strExponent;
-		} else {
-			strReslt = strMantissa;
-		}
-
-		return strReslt;
-	}
-
-	@SuppressWarnings("unused")
 	private String formater(String strReslt) {
 		String strMantissa = strReslt;
 		int inLen = 0;
@@ -394,12 +189,6 @@ class ScientificLogic extends Logic {
 		NumberFormat formatter = new DecimalFormat(strFormat);
 
 		return formatter.format(Double.parseDouble(strReslt));
-
-	}
-
-	@Override
-	public boolean isOperator(char chC) {
-		return "+-\u00d7\u00f7/*".indexOf(chC) != -1;
 	}
 
 	// To handle DEG change event
