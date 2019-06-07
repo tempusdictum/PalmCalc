@@ -33,8 +33,8 @@ import android.util.Log;
 public class Persist {
 	private static final int inLastVersion = 2;
 	private static final String strFilename = "calculator.txt";
-	private Context mContext;
-	History history = new History();
+	private final Context mContext;
+	public final History history = new History();
 	private int inDelMode;
 
 	public Persist(Context context) {

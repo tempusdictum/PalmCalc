@@ -32,7 +32,7 @@ import android.widget.*;
 import com.github.palmcalc2019.palmcalc.PalmCalcActivity;
 import com.github.palmcalc2019.palmcalc.R;
 
-class ClickAndKeyListener implements View.OnKeyListener, OnClickListener {
+class EventListener implements View.OnKeyListener, OnClickListener {
 
 	int inP = 0;
 

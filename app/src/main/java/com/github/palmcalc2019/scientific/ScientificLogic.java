@@ -37,7 +37,7 @@ import java.util.Locale;
 import org.javia.arity.Symbols;
 import org.javia.arity.SyntaxException;
 
-class ScientificLogic implements Logic {
+class ScientificLogic extends Logic {
 	private CalculatorDisplay mDisplay;
 	private static final String strInfinityUnicode = "\u221e";
 	public static final String strMarker = "?";
@@ -140,8 +140,8 @@ class ScientificLogic implements Logic {
 				: CalculatorDisplay.Scroll.NONE);
 		cleared();
 	}
-
-	void cleared() {
+    @Override
+	public void cleared() {
 		strResult = "";
 		isError = false;
 		updateHistory();
@@ -169,7 +169,8 @@ class ScientificLogic implements Logic {
 		clear(mDeleteMode == inDelModClea);
 	}
 
-	void onEnter() {
+	@Override
+	public void onEnter() {
 		if (mDeleteMode == inDelModClea) {
 			clearWithHistory(false);
 		} else {

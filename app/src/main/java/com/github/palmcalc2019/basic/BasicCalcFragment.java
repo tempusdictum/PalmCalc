@@ -35,6 +35,11 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.*;
 
 import com.github.palmcalc2019.palmcalc.R;
+import com.github.palmcalc2019.ui.CalculatorDisplay;
+import com.github.palmcalc2019.ui.CalculatorEditText;
+import com.github.palmcalc2019.ui.History;
+import com.github.palmcalc2019.ui.HistoryAdapter;
+import com.github.palmcalc2019.ui.Persist;
 
 public class BasicCalcFragment extends Fragment implements BasicLogic.Listener {
 

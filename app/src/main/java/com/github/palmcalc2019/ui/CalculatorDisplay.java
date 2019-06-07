@@ -42,7 +42,7 @@ public class CalculatorDisplay extends ViewSwitcher {
 
 	private static final int inAnimDuration = 500;
 
-	enum Scroll {
+	public enum Scroll {
 		UP, DOWN, NONE
 	}
 
@@ -65,7 +65,7 @@ public class CalculatorDisplay extends ViewSwitcher {
 		return inMaxDigits;
 	}
 
-	protected void setLogic(Logic logic) {
+	public void setLogic(Logic logic) {
 		mLogic = logic;
 		NumberKeyListener calculatorKeyListener = new NumberKeyListener() {
 
@@ -114,23 +114,23 @@ public class CalculatorDisplay extends ViewSwitcher {
 		outAnimDown.setDuration(inAnimDuration);
 	}
 
-	void insert(String strInput) {
+	public void insert(String strInput) {
 		EditText etxtEditor = (EditText) getCurrentView();
 		etxtEditor.setTextColor(Color.parseColor("#000000"));
 		int cursor = etxtEditor.getSelectionStart();
 		etxtEditor.getText().insert(cursor, strInput);
 	}
 
-	EditText getEditText() {
+	public EditText getEditText() {
 		return (EditText) getCurrentView();
 	}
 
-	Editable getText() {
+	public Editable getText() {
 		EditText etxtText = (EditText) getCurrentView();
 		return etxtText.getText();
 	}
 
-	void setText(CharSequence text, Scroll dir) {
+	public void setText(CharSequence text, Scroll dir) {
 		if (getText().length() == 0) {
 			dir = Scroll.NONE;
 		}
@@ -158,7 +158,7 @@ public class CalculatorDisplay extends ViewSwitcher {
 		showNext();
 	}
 
-	int getSelectionStart() {
+	public int getSelectionStart() {
 		EditText etxtEditText = (EditText) getCurrentView();
 		return etxtEditText.getSelectionStart();
 	}

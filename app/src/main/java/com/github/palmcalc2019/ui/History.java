@@ -83,11 +83,11 @@ public class History {
 		out.writeInt(inPos);
 	}
 
-	void update(String strText) {
+	public void update(String strText) {
 		current().setEdited(strText);
 	}
 
-	boolean moveToPrevious() {
+	public boolean moveToPrevious() {
 		if (inPos > 0) {
 			--inPos;
 			return true;
@@ -95,7 +95,7 @@ public class History {
 		return false;
 	}
 
-	boolean moveToNext() {
+	public boolean moveToNext() {
 		if (inPos < mEntries.size() - 1) {
 			++inPos;
 			return true;
@@ -108,10 +108,9 @@ public class History {
 		spEditor = shPref.edit();
 		spEditor.clear();
 		spEditor.commit();
-
 	}
 
-	void enter(String strText) {
+	public void enter(String strText) {
 		current().clearEdited();
 		shPref = ScientificCalcFragment.ctx.getSharedPreferences(strPrefname, 0);
 		spEditor = shPref.edit();
@@ -164,7 +163,7 @@ public class History {
 		return mEntries.elementAt(inPos);
 	}
 
-	String getText() {
+	public String getText() {
 		return current().getEdited();
 	}
 

@@ -18,7 +18,9 @@
 
 package com.github.palmcalc2019.basic;
 
-import com.github.palmcalc2019.basic.CalculatorDisplay.Scroll;
+import com.github.palmcalc2019.ui.CalculatorDisplay;
+import com.github.palmcalc2019.ui.History;
+import com.github.palmcalc2019.ui.Logic;
 
 import android.text.TextUtils;
 import android.util.Log;
@@ -31,7 +33,9 @@ import java.util.Locale;
 import org.javia.arity.Symbols;
 import org.javia.arity.SyntaxException;
 
-class BasicLogic {
+import androidx.core.content.PermissionChecker;
+
+class BasicLogic extends Logic {
 	private CalculatorDisplay mDisplay;
 	private Symbols mSymbols = new Symbols();
 	private History mHistory;
@@ -96,7 +100,8 @@ class BasicLogic {
 		return mDisplay.getText().toString();
 	}
 
-	void insert(String delta) {
+	@Override
+	public void insert(String delta) {
 		Log.d("Display", delta);
 		mDisplay.insert(delta);
 		setDeleteMode(DELETE_MODE_BACKSPACE);
@@ -129,7 +134,8 @@ class BasicLogic {
 		cleared();
 	}
 
-	void cleared() {
+	@Override
+	public void cleared() {
 		mResult = "";
 		mIsError = false;
 		updateHistory();
@@ -137,7 +143,8 @@ class BasicLogic {
 		setDeleteMode(DELETE_MODE_BACKSPACE);
 	}
 
-	boolean acceptInsert(String delta) {
+	@Override
+	public boolean acceptInsert(String delta) {
 		String text = getText();
 		return !mIsError
 				&& (!mResult.equals(text) || isOperator(delta) || mDisplay
@@ -157,7 +164,8 @@ class BasicLogic {
 		clear(mDeleteMode == DELETE_MODE_CLEAR);
 	}
 
-	void onEnter() {
+	@Override
+	public void onEnter() {
 		if (mDeleteMode == DELETE_MODE_CLEAR) {
 			clearWithHistory(false); // clear after an Enter on result
 		} else {
@@ -165,7 +173,7 @@ class BasicLogic {
 		}
 	}
 
-	public void evaluateAndShowResult(String text, Scroll scroll) {
+	public void evaluateAndShowResult(String text, CalculatorDisplay.Scroll scroll) {
 		try {
 			String result = evaluate(text);
 			Log.d("RESULT", result);
@@ -213,7 +221,8 @@ class BasicLogic {
 		}
 	}
 
-	String evaluate(String input) throws SyntaxException {
+	@Override
+	public String evaluate(String input) throws SyntaxException {
 		if (input.trim().equals("")) {
 			return "";
 		}
@@ -282,11 +291,12 @@ class BasicLogic {
 		return result;
 	}
 
-	static boolean isOperator(String text) {
+	public boolean isOperator(String text) {
 		return text.length() == 1 && isOperator(text.charAt(0));
 	}
 
-	static boolean isOperator(char c) {
+	@Override
+	public boolean isOperator(char c) {
 		// plus minus times div
 		return "+-\u00d7\u00f7/*".indexOf(c) != -1;
 	}
