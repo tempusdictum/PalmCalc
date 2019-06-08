@@ -95,7 +95,7 @@ public abstract class Logic {
         return "+-\u00d7\u00f7/*".indexOf(c) != -1;
     }
 
-    void onDown() {
+    public void onDown() {
         String text = getText();
         if (!text.equals(mResult)) {
             mHistory.update(text);
@@ -109,7 +109,7 @@ public abstract class Logic {
         return mDisplay.getText().toString();
     }
 
-    void onUp() {
+    public void onUp() {
         String strText = getText();
         if (!strText.equals(mResult)) {
             mHistory.update(strText);
