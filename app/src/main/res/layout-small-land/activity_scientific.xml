@@ -61,7 +61,7 @@
                 android:layout_height="fill_parent"
                 android:layout_weight="1.0">
 
-            <com.github.palmcalc2019.scientific.ColorButton
+            <com.github.palmcalc2019.ui.ColorButton
                     android:id="@+id/buttonShift"
                     style="@style/Button_char"
                     android:layout_width="fill_parent"
@@ -72,7 +72,7 @@
                     android:textColor="#64bef3"
                     android:textStyle="bold"/>
 
-            <com.github.palmcalc2019.scientific.ColorButton
+            <com.github.palmcalc2019.ui.ColorButton
                     android:id="@+id/buttonDeg"
                     style="@style/Button_char"
                     android:layout_width="fill_parent"
@@ -81,7 +81,7 @@
                     android:layout_weight="1.0"
                     android:text="@string/strbtDEG"/>
 
-            <com.github.palmcalc2019.scientific.ColorButton
+            <com.github.palmcalc2019.ui.ColorButton
                     android:id="@+id/buttonAlt"
                     style="@style/Button_char"
                     android:layout_width="fill_parent"
@@ -132,7 +132,7 @@
                 android:layout_weight="1"
                 android:gravity="center">
 
-            <com.github.palmcalc2019.scientific.ColorButton
+            <com.github.palmcalc2019.ui.ColorButton
                     android:id="@+id/buttonMR"
                     style="@style/Button_char"
                     android:layout_width="fill_parent"
@@ -141,7 +141,7 @@
                     android:layout_weight="1.0"
                     android:text="@string/strMR"/>
 
-            <com.github.palmcalc2019.scientific.ColorButton
+            <com.github.palmcalc2019.ui.ColorButton
                     android:id="@+id/buttonMS"
                     style="@style/Button_char"
                     android:layout_width="fill_parent"
@@ -150,7 +150,7 @@
                     android:layout_weight="1.0"
                     android:text="@string/strMS"/>
 
-            <com.github.palmcalc2019.scientific.ColorButton
+            <com.github.palmcalc2019.ui.ColorButton
                     android:id="@+id/buttonMp"
                     style="@style/Button_char"
                     android:layout_width="fill_parent"
@@ -203,7 +203,7 @@
                 android:layout_height="fill_parent"
                 android:layout_weight="1.0">
 
-            <com.github.palmcalc2019.scientific.ColorButton
+            <com.github.palmcalc2019.ui.ColorButton
                     android:id="@+id/buttonHyp"
                     style="@style/Button_char"
                     android:layout_width="fill_parent"
@@ -212,7 +212,7 @@
                     android:layout_weight="1.0"
                     android:text="@string/strHyp"/>
 
-            <com.github.palmcalc2019.scientific.ColorButton
+            <com.github.palmcalc2019.ui.ColorButton
                     android:id="@+id/buttonSin"
                     style="@style/Button_char"
                     android:layout_width="fill_parent"
@@ -222,7 +222,7 @@
                     android:tag="sin(,asin("
                     android:text="@string/strSin"/>
 
-            <com.github.palmcalc2019.scientific.ColorButton
+            <com.github.palmcalc2019.ui.ColorButton
                     android:id="@+id/buttonCos"
                     style="@style/Button_char"
                     android:layout_width="fill_parent"
@@ -276,7 +276,7 @@
                 android:layout_height="fill_parent"
                 android:layout_weight="1.0">
 
-            <com.github.palmcalc2019.scientific.ColorButton
+            <com.github.palmcalc2019.ui.ColorButton
                     android:id="@+id/buttonTan"
                     style="@style/Button_char"
                     android:layout_width="fill_parent"
@@ -286,7 +286,7 @@
                     android:tag="tan(,atan("
                     android:text="@string/strTan"/>
 
-            <com.github.palmcalc2019.scientific.ColorButton
+            <com.github.palmcalc2019.ui.ColorButton
                     android:id="@+id/buttonLn"
                     style="@style/Button_char"
                     android:layout_width="fill_parent"
@@ -296,7 +296,7 @@
                     android:tag="ln(,e^("
                     android:text="@string/strLn"/>
 
-            <com.github.palmcalc2019.scientific.ColorButton
+            <com.github.palmcalc2019.ui.ColorButton
                     android:id="@+id/buttonLog"
                     style="@style/Button_char"
                     android:layout_width="fill_parent"
@@ -358,7 +358,7 @@
                     android:tag="^("
                     android:text="@string/strBlank"/>
 
-            <com.github.palmcalc2019.scientific.ColorButton
+            <com.github.palmcalc2019.ui.ColorButton
                     android:id="@+id/buttonRoot"
                     style="@style/Button_char"
                     android:layout_width="fill_parent"
@@ -420,7 +420,7 @@
                 android:layout_height="fill_parent"
                 android:layout_weight="1.0">
 
-            <com.github.palmcalc2019.scientific.ColorButton
+            <com.github.palmcalc2019.ui.ColorButton
                     android:id="@+id/buttonPerc"
                     style="@style/Button_char"
                     android:layout_width="fill_parent"
@@ -430,7 +430,7 @@
                     android:tag="%,1/("
                     android:text="@string/strPerc"/>
 
-            <com.github.palmcalc2019.scientific.ColorButton
+            <com.github.palmcalc2019.ui.ColorButton
                     android:id="@+id/buttonBo"
                     style="@style/Button_char"
                     android:layout_width="fill_parent"
@@ -440,7 +440,7 @@
                     android:tag="("
                     android:text="@string/strBO"/>
 
-            <com.github.palmcalc2019.scientific.ColorButton
+            <com.github.palmcalc2019.ui.ColorButton
                     android:id="@+id/buttonBc"
                     style="@style/Button_char"
                     android:layout_width="fill_parent"
@@ -514,23 +514,23 @@
                 android:background="@drawable/displayshape"
                 android:orientation="vertical">
 
-            <com.github.palmcalc2019.scientific.CalculatorDisplay
+            <com.github.palmcalc2019.ui.CalculatorDisplay
                     android:id="@+id/display"
                     android:layout_width="fill_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     maxDigits="@integer/max_digits">
 
-                <com.github.palmcalc2019.scientific.CalculatorEditText
+                <com.github.palmcalc2019.ui.CalculatorEditText
                         android:id="@+id/txtInput"
                         style="@style/display_style"
                         android:imeOptions="flagNoExtractUi"/>
 
-                <com.github.palmcalc2019.scientific.CalculatorEditText
+                <com.github.palmcalc2019.ui.CalculatorEditText
                         android:id="@+id/txtOutput"
                         style="@style/display_style"
                         android:imeOptions="flagNoExtractUi"/>
-            </com.github.palmcalc2019.scientific.CalculatorDisplay>
+            </com.github.palmcalc2019.ui.CalculatorDisplay>
         </LinearLayout>
 
         <TableLayout
@@ -549,7 +549,7 @@
                     android:layout_marginTop="6.0dip"
                     android:layout_weight="2">
 
-                <com.github.palmcalc2019.scientific.ColorButton
+                <com.github.palmcalc2019.ui.ColorButton
                         android:id="@+id/button7"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
@@ -561,7 +561,7 @@
                         android:onClick="enter"
                         android:tag="7"/>
 
-                <com.github.palmcalc2019.scientific.ColorButton
+                <com.github.palmcalc2019.ui.ColorButton
                         android:id="@+id/button8"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
@@ -573,7 +573,7 @@
                         android:onClick="enter"
                         android:tag="8"/>
 
-                <com.github.palmcalc2019.scientific.ColorButton
+                <com.github.palmcalc2019.ui.ColorButton
                         android:id="@+id/button9"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
@@ -585,7 +585,7 @@
                         android:onClick="enter"
                         android:tag="9"/>
 
-                <com.github.palmcalc2019.scientific.ColorButton
+                <com.github.palmcalc2019.ui.ColorButton
                         android:id="@+id/buttonDel"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
@@ -597,7 +597,7 @@
                         android:text="DEL"
                         android:textColor="#FFFFFF"/>
 
-                <com.github.palmcalc2019.scientific.ColorButton
+                <com.github.palmcalc2019.ui.ColorButton
                         android:id="@+id/buttonAC"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
@@ -671,7 +671,7 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="2">
 
-                <com.github.palmcalc2019.scientific.ColorButton
+                <com.github.palmcalc2019.ui.ColorButton
                         android:id="@+id/button4"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
@@ -683,7 +683,7 @@
                         android:onClick="enter"
                         android:tag="4,!"/>
 
-                <com.github.palmcalc2019.scientific.ColorButton
+                <com.github.palmcalc2019.ui.ColorButton
                         android:id="@+id/button5"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
@@ -695,7 +695,7 @@
                         android:onClick="enter"
                         android:tag="5,comb("/>
 
-                <com.github.palmcalc2019.scientific.ColorButton
+                <com.github.palmcalc2019.ui.ColorButton
                         android:id="@+id/button6"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
@@ -707,7 +707,7 @@
                         android:onClick="enter"
                         android:tag="6,perm("/>
 
-                <com.github.palmcalc2019.scientific.ColorButton
+                <com.github.palmcalc2019.ui.ColorButton
                         android:id="@+id/buttonMultiply"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
@@ -719,7 +719,7 @@
                         android:onClick="enter"
                         android:tag="×"/>
 
-                <com.github.palmcalc2019.scientific.ColorButton
+                <com.github.palmcalc2019.ui.ColorButton
                         android:id="@+id/buttonDivide"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
@@ -794,7 +794,7 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="2">
 
-                <com.github.palmcalc2019.scientific.ColorButton
+                <com.github.palmcalc2019.ui.ColorButton
                         android:id="@+id/button1"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
@@ -806,7 +806,7 @@
                         android:onClick="enter"
                         android:tag="1,pi"/>
 
-                <com.github.palmcalc2019.scientific.ColorButton
+                <com.github.palmcalc2019.ui.ColorButton
                         android:id="@+id/button2"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
@@ -818,7 +818,7 @@
                         android:onClick="enter"
                         android:tag="2,e"/>
 
-                <com.github.palmcalc2019.scientific.ColorButton
+                <com.github.palmcalc2019.ui.ColorButton
                         android:id="@+id/button3"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
@@ -830,7 +830,7 @@
                         android:onClick="enter"
                         android:tag="3"/>
 
-                <com.github.palmcalc2019.scientific.ColorButton
+                <com.github.palmcalc2019.ui.ColorButton
                         android:id="@+id/buttonPlus"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
@@ -842,7 +842,7 @@
                         android:onClick="enter"
                         android:tag="+"/>
 
-                <com.github.palmcalc2019.scientific.ColorButton
+                <com.github.palmcalc2019.ui.ColorButton
                         android:id="@+id/buttonSubtract"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
@@ -915,7 +915,7 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="2">
 
-                <com.github.palmcalc2019.scientific.ColorButton
+                <com.github.palmcalc2019.ui.ColorButton
                         android:id="@+id/button0"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
@@ -927,7 +927,7 @@
                         android:onClick="enter"
                         android:tag="0"/>
 
-                <com.github.palmcalc2019.scientific.ColorButton
+                <com.github.palmcalc2019.ui.ColorButton
                         android:id="@+id/buttonDot"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
@@ -937,7 +937,7 @@
                         android:onClick="enter"
                         android:tag="."/>
 
-                <com.github.palmcalc2019.scientific.ColorButton
+                <com.github.palmcalc2019.ui.ColorButton
                         android:id="@+id/ButtonExp"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
@@ -947,7 +947,7 @@
                         android:onClick="enter"
                         android:tag="×10^(,#"/>
 
-                <com.github.palmcalc2019.scientific.ColorButton
+                <com.github.palmcalc2019.ui.ColorButton
                         android:id="@+id/ButtonAns"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
@@ -956,7 +956,7 @@
                         android:background="@drawable/basic_btn_normal"
                         android:tag=",#"/>
 
-                <com.github.palmcalc2019.scientific.ColorButton
+                <com.github.palmcalc2019.ui.ColorButton
                         android:id="@+id/ButtonEqual"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"

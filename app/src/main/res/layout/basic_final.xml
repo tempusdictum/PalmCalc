@@ -19,7 +19,7 @@
             android:background="@drawable/displayshape"
             android:orientation="horizontal">
 
-        <com.github.palmcalc2019.basic.CalculatorDisplay
+        <com.github.palmcalc2019.ui.CalculatorDisplay
                 android:id="@+id/display"
                 android:layout_width="0dip"
                 android:layout_height="fill_parent"
@@ -27,16 +27,16 @@
 
                 maxDigits="@integer/max_digits">
 
-            <com.github.palmcalc2019.basic.CalculatorEditText
+            <com.github.palmcalc2019.ui.CalculatorEditText
                     android:id="@+id/txtInput"
                     style="@style/display_style"
                     android:imeOptions="flagNoExtractUi"/>
 
-            <com.github.palmcalc2019.basic.CalculatorEditText
+            <com.github.palmcalc2019.ui.CalculatorEditText
                     android:id="@+id/txtOutput"
                     style="@style/display_style"
                     android:imeOptions="flagNoExtractUi"/>
-        </com.github.palmcalc2019.basic.CalculatorDisplay>
+        </com.github.palmcalc2019.ui.CalculatorDisplay>
 
 
     </LinearLayout>
