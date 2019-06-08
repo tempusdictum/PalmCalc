@@ -39,6 +39,7 @@ import com.github.palmcalc2019.ui.CalculatorDisplay;
 import com.github.palmcalc2019.ui.CalculatorEditText;
 import com.github.palmcalc2019.ui.History;
 import com.github.palmcalc2019.ui.HistoryAdapter;
+import com.github.palmcalc2019.ui.Logic;
 import com.github.palmcalc2019.ui.Persist;
 
 public class BasicCalcFragment extends Fragment implements BasicLogic.Listener {
@@ -89,7 +90,7 @@ public class BasicCalcFragment extends Fragment implements BasicLogic.Listener {
 		mPersist = new Persist(ctx);
 		mPersist.load();
 		mHistory = mPersist.history;
-		mLogic = new BasicLogic(ctx, mHistory, mDisplay);
+		mLogic = new BasicLogic(mHistory, mDisplay);
 		mLogic.setDeleteMode(mPersist.getDeleteMode());
 		mLogic.setLineLength(mDisplay.getMaxDigits());
 		HistoryAdapter historyAdapter = new HistoryAdapter(ctx, mHistory,
@@ -174,7 +175,7 @@ public class BasicCalcFragment extends Fragment implements BasicLogic.Listener {
 	}
 
 	private void updateDeleteMode() {
-		if (mLogic.getDeleteMode() == BasicLogic.DELETE_MODE_BACKSPACE) {
+		if (mLogic.getDeleteMode() == Logic.DELETE_MODE_BACKSPACE) {
 
 		}
 	}

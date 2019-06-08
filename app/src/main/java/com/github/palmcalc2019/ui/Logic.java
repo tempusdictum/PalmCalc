@@ -17,7 +17,7 @@ public abstract class Logic {
     protected static final char chMinus = '-';
     protected static final String INFINITY_UNICODE = "\u221e";
     protected static final String INFINITY = "Infinity";
-    protected final static int DELETE_MODE_BACKSPACE = 0;
+    public final static int DELETE_MODE_BACKSPACE = 0;
     protected Symbols mSymbols = new Symbols();
     protected String mResult = "";
     protected int mLineLength = 0;
@@ -170,11 +170,11 @@ public abstract class Logic {
         cleared();
     }
 
-    void onClear() {
+    public void onClear() {
         clear(mDeleteMode == DELETE_MODE_CLEAR);
     }
 
-    void setLineLength(int inDigits) {
+    public void setLineLength(int inDigits) {
         mLineLength = inDigits;
     }
 
