@@ -1,4 +1,4 @@
-/**
+/*
  * <Palmcalc is a multipurpose application consisting of calculators, converters
  * and world clock> Copyright (C) <2013> <Cybrosys Technologies pvt. ltd.>
  * 
@@ -30,12 +30,28 @@ import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+
+//import com.actionbarsherlock.app.ActionBar;
+import androidx.appcompat.app.ActionBar;
+//import com.actionbarsherlock.app.SherlockFragmentActivity;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
+//import androidx.appcompat.app.AppCompatActivity;
+//import com.actionbarsherlock.app.ActionBar.Tab;
+import androidx.appcompat.app.ActionBar.Tab;
+//import com.actionbarsherlock.view.Menu;
+import android.view.Menu;
+//import com.actionbarsherlock.view.MenuInflater;
+import android.view.MenuInflater;
+//import com.actionbarsherlock.view.MenuItem;
+import android.view.MenuItem;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentStatePagerAdapter;
-import android.app.FragmentTransaction;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
+
 import android.util.DisplayMetrics;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -44,11 +60,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import android.app.ActionBar;
-import androidx.fragment.app.FragmentActivity;
-import android.app.ActionBar.Tab;
-import android.view.Menu;
-import android.view.MenuInflater;
 import com.github.palmcalc2019.bmi.bmiactivity;
 import com.github.palmcalc2019.clock.GlobalClockActivity;
 import com.github.palmcalc2019.scientific.ScientificActivity;
@@ -76,7 +87,7 @@ import com.github.palmcalc2019.scientific.Demoscreen;
  * this program. If not, see <http://www.gnu.org/licenses/>.
  **/
 
-public class PalmCalcActivity extends FragmentActivity implements
+public class PalmCalcActivity extends AppCompatActivity implements
 		android.view.View.OnClickListener {
 
 	Button btnClear, btnSend;
@@ -132,7 +143,7 @@ public class PalmCalcActivity extends FragmentActivity implements
 		mViewPager.setId(R.id.pager);
 		showUserSettings();
 		setContentView(mViewPager);
-		bar = getActionBar();//getSupportActionBar();
+		bar = getSupportActionBar();
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM,
 				WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
 		
@@ -362,11 +373,11 @@ public class PalmCalcActivity extends FragmentActivity implements
 			}
 		}
 
-		public TabsAdapter(FragmentActivity activity, ViewPager pager) {
+		public TabsAdapter(AppCompatActivity activity, ViewPager pager) {
 			super(activity.getSupportFragmentManager());
 
 			mContext = activity;
-			mActionBar = activity.getActionBar();
+			mActionBar = activity.getSupportActionBar();
 			mViewPager = pager;
 			mViewPager.setAdapter(this);
 			mViewPager.setOnPageChangeListener(this);
