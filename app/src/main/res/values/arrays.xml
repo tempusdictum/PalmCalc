@@ -14,7 +14,6 @@
     <string-array name="Startscreen">
         <item name="scientific">Scientific Calculator</item>
         <item name="unit">Unit Converter</item>
-        <item name="currency">Currency Converter</item>
         <item name="basic">Basic Calculator</item>
         <item name="tip">Tip Calculator</item>
         <item name="Global">Global Clock</item>
@@ -23,11 +22,10 @@
     <string-array name="StartscreenValues">
         <item name="scientific">0</item>
         <item name="unit">1</item>
-        <item name="currency">2</item>
-        <item name="basic">3</item>
-        <item name="tip">4</item>
-        <item name="Global">5</item>
-        <item name="BMI">6</item>
+        <item name="basic">2</item>
+        <item name="tip">3</item>
+        <item name="Global">4</item>
+        <item name="BMI">5</item>
     </string-array>
     <string-array name="HidescreenValues">
         <item name="scientific">com.github.palmcalc2019.scientific.ScientificActivity</item>
