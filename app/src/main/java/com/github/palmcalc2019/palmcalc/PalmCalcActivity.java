@@ -200,24 +200,6 @@ public class PalmCalcActivity extends AppCompatActivity implements
 	}
 
 	@Override
-	public void onBackPressed() {
-		new AlertDialog.Builder(PalmCalcActivity.this)
-				.setIcon(R.drawable.palm_icon)
-				.setTitle("Confirm Exit")
-
-				.setMessage("Do you want to Exit?")
-				.setPositiveButton("Yes",
-						new DialogInterface.OnClickListener() {
-							@Override
-							public void onClick(DialogInterface dialog,
-									int which) {
-								finish();
-							}
-						}).setNegativeButton("No", null).show();
-
-	}
-
-	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
 
