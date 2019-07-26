@@ -259,5 +259,38 @@
     <string name="menu_logout">Logout</string>
 
     <string name="whealfontsize" translatable="false">16</string>
+    <string name="about_text">
+        <p>Thanks for downloading and using PalmCalc.
+        Hope you had a great experience and your purpose was served. </p>
+
+        <p>PalmCalc was created by CybroSys software, who developed it until 2013.
+        In 2018, the app was removed from the F-Droid store,
+        because its APK signing key was now old and insecure (MD5).
+        </p><p>
+        I missed this app so much that in 2019 I decided to revive it.
+        from now on I intend to keep this app maintained and working with modern Android devices.
+        This is more work than it sounds.
+        </p>
+
+        <p>Since the last PalmCalc release in 2013, Android has changed a lot:
+            <ul><li>The app\'s build tool had to be  migrated from Maven to Gradle</li>
+            <li>The discontinued ActionBarSherlock library was replaced with Android Support libraries,
+            which themselves have recently been bundled into AndroidX.</li>
+            <li>The maths expression library used by PalmCalc, Javia Arity, has been abandoned.
+            for now I obtained a working build from a GitHub fork using JitPack,
+            but in the future PalmCalc will have to find a replacement,
+            or maintain that codebase as well. <br />
+            It was hosted on Google Code, which is also gone.</li>
+            <li>Android development itself has switched from using Eclipse as the
+            recommended IDE, to Android Studio (based on IntelliJ IDEA)</li>
+            <li>Android's programming language itself is switching from Java to Kotlin</li></ul>
+        </p>
+
+        <p>I\'m not accepting donations at this time, but if you spot a bug,
+            or have a feature you would like implemented, check out the issues page on GitHub.
+            If it hasn\'t been mentioned already, feel free to create a new issue.
+        </p>
+            </string>
+    <string name="goto_issues_button_text">Go to Issues Page</string>
 
 </resources>

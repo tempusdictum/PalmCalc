@@ -64,7 +64,7 @@ import com.github.palmcalc2019.BmiFragment;
 import com.github.palmcalc2019.clock.GlobalClockFragment;
 import com.github.palmcalc2019.scientific.ScientificCalcFragment;
 import com.github.palmcalc2019.basic.BasicCalcFragment;
-import com.github.palmcalc2019.ShareAppFragment;
+import com.github.palmcalc2019.AboutAppFragment;
 import com.github.palmcalc2019.TipFragment;
 import com.github.palmcalc2019.unit.ConverterFragment;
 import com.github.palmcalc2019.scientific.Demoscreen;
@@ -169,7 +169,7 @@ public class PalmCalcActivity extends AppCompatActivity implements
 		mTabsAdapter.addTab(bar.newTab(), TipFragment.class, null);
 		mTabsAdapter.addTab(bar.newTab(), GlobalClockFragment.class, null);
 		mTabsAdapter.addTab(bar.newTab(), BmiFragment.class, null);
-		mTabsAdapter.addTab(bar.newTab(), ShareAppFragment.class, null);
+		mTabsAdapter.addTab(bar.newTab(), AboutAppFragment.class, null);
 
 		StartScreen();
 	}
