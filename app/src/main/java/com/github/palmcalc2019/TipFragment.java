@@ -677,6 +677,7 @@ public class TipFragment extends Fragment
 		public void onChanged(WheelView wheel, int oldValue, int newValue) {
 			try {
 				String id = wheel.getTag().toString();
+				//android.util.Log.i("wheel","wheel id ="+id);
 				if (!wheelScrolled) {
 					if (id.equalsIgnoreCase("1")) {
 						int currentvalue = newValue;
@@ -881,7 +882,7 @@ public class TipFragment extends Fragment
 									R.id.tippercentage).getCurrentItem()]);
 							etxtsplt.setText(wheelMenusplt[getWheel(
 									R.id.tipsplt).getCurrentItem()]);
-							wheelselection = 20;
+							wheelselection = 19;
 							break;
 						case 20:
 							initWheel3(R.id.tippercentage, wheelMenuPercentage1);
@@ -891,7 +892,7 @@ public class TipFragment extends Fragment
 									R.id.tippercentage).getCurrentItem()]);
 							etxtsplt.setText(wheelMenusplt[getWheel(
 									R.id.tipsplt).getCurrentItem()]);
-							wheelselection = 21;
+							wheelselection = 20;
 							break;
 						case 21:
 							initWheel3(R.id.tippercentage, wheelMenuPercentage1);
@@ -901,7 +902,7 @@ public class TipFragment extends Fragment
 									R.id.tippercentage).getCurrentItem()]);
 							etxtsplt.setText(wheelMenusplt[getWheel(
 									R.id.tipsplt).getCurrentItem()]);
-							wheelselection = 22;
+							wheelselection = 21;
 							break;
 						case 22:
 							initWheel3(R.id.tippercentage, wheelMenuPercentage4);
@@ -911,7 +912,7 @@ public class TipFragment extends Fragment
 									R.id.tippercentage).getCurrentItem()]);
 							etxtsplt.setText(wheelMenusplt[getWheel(
 									R.id.tipsplt).getCurrentItem()]);
-							wheelselection = 23;
+							wheelselection = 22;
 							break;
 						case 23:
 							initWheel3(R.id.tippercentage, wheelMenuPercentage6);
@@ -921,7 +922,7 @@ public class TipFragment extends Fragment
 									R.id.tippercentage).getCurrentItem()]);
 							etxtsplt.setText(wheelMenusplt[getWheel(
 									R.id.tipsplt).getCurrentItem()]);
-							wheelselection = 24;
+							wheelselection = 23;
 							break;
 						case 24:
 							initWheel3(R.id.tippercentage, wheelMenuPercentage3);
@@ -931,7 +932,7 @@ public class TipFragment extends Fragment
 									R.id.tippercentage).getCurrentItem()]);
 							etxtsplt.setText(wheelMenusplt[getWheel(
 									R.id.tipsplt).getCurrentItem()]);
-							wheelselection = 25;
+							wheelselection = 24;
 							break;
 						case 25:
 							initWheel3(R.id.tippercentage, wheelMenuPercentage1);
@@ -941,7 +942,7 @@ public class TipFragment extends Fragment
 									R.id.tippercentage).getCurrentItem()]);
 							etxtsplt.setText(wheelMenusplt[getWheel(
 									R.id.tipsplt).getCurrentItem()]);
-							wheelselection = 26;
+							wheelselection = 25;
 							break;
 						case 26:
 							initWheel3(R.id.tippercentage,
@@ -952,7 +953,7 @@ public class TipFragment extends Fragment
 									R.id.tippercentage).getCurrentItem()]);
 							etxtsplt.setText(wheelMenusplt[getWheel(
 									R.id.tipsplt).getCurrentItem()]);
-							wheelselection = 27;
+							wheelselection = 26;
 							break;
 						case 27:
 							initWheel3(R.id.tippercentage,
@@ -963,10 +964,11 @@ public class TipFragment extends Fragment
 									R.id.tippercentage).getCurrentItem()]);
 							etxtsplt.setText(wheelMenusplt[getWheel(
 									R.id.tipsplt).getCurrentItem()]);
-							wheelselection = 19;
+							wheelselection = 27;
 							break;
 						}
 					} else {
+						//android.util.Log.i("wheel","wheelselection = "+wheelselection);
 						switch (wheelselection) {
 						case 0:
 							etxtcntry.setText(wheelMenuTipcntry[getWheel(

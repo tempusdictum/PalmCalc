@@ -283,7 +283,7 @@
             It was hosted on Google Code, which is also gone.</li>
             <li>Android development itself has switched from using Eclipse as the
             recommended IDE, to Android Studio (based on IntelliJ IDEA)</li>
-            <li>Android's programming language itself is switching from Java to Kotlin</li></ul>
+            <li>Android\'s programming language itself is switching from Java to Kotlin</li></ul>
         </p>
 
         <p>I\'m not accepting donations at this time, but if you spot a bug,
