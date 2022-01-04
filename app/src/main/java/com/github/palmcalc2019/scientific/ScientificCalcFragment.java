@@ -76,7 +76,7 @@ public class ScientificCalcFragment extends Fragment implements ScientificLogic.
 	private String strFSEstate = "FloatPt";
 	static int inDispheight;
 	static int inDispwidth;
-	static Context ctx;
+	public static Context ctx;
 	private String strAlt = "";
 	private String strDeg = "[DEG]";
 	private String strHyp = "";

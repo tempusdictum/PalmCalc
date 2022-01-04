@@ -21,6 +21,8 @@ package com.github.palmcalc2019.ui;
 import android.content.SharedPreferences;
 import android.widget.BaseAdapter;
 
+import com.github.palmcalc2019.scientific.ScientificCalcFragment;
+
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
@@ -109,6 +111,7 @@ public class History {
 
 	public void enter(String strText) {
 		current().clearEdited();
+		shPref = ScientificCalcFragment.ctx.getSharedPreferences("myHistpref", 0);
 		SharedPreferences.Editor spEditor = shPref.edit();
 		int inI = shPref.getInt("HistIndex", 0);
 		if (mEntries.size() >= inMaxEntries) {

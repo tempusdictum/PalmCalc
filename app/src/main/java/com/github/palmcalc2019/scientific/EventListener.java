@@ -79,6 +79,7 @@ class EventListener implements View.OnKeyListener, OnClickListener,
 	public static Context ctx = PalmCalcActivity.ctx;
 	static SharedPreferences spMemory;
 	SharedPreferences shPref;
+
 	private static String PREFNAME = "nypref";
 	static SharedPreferences.Editor editor;
 

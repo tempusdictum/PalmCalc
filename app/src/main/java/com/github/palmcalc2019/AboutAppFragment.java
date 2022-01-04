@@ -23,6 +23,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -49,7 +50,8 @@ public class AboutAppFragment extends Fragment {
         TextView webAbout = (TextView) getView().findViewById(R.id.about_textview);
 		webAbout.setText(Html.fromHtml(getString(R.string.about_text)));
 
-        ImageButton btnlikeus = (ImageButton) getView().findViewById(R.id.goto_issues_button);
+        //ImageButton btnlikeus = (ImageButton) getView().findViewById(R.id.goto_issues_button);
+		AppCompatButton btnlikeus = getView().findViewById(R.id.goto_issues_button);
 		btnlikeus.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
